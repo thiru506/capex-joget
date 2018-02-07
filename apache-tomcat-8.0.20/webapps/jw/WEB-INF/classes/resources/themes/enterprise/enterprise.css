@@ -1,0 +1,216 @@
+body {
+    color: #363636;
+    background: #F0F4F5;
+}
+#page {
+    border-color: -moz-use-text-color silver;
+    border-style: none none;
+    border-width: 0 3px;
+    font-family: 'PT Sans',Arial;
+    font-size: 13px;
+    position: relative;
+    width: 957px;
+}
+#header, #main, #footer {
+    border-bottom: none;
+}
+#header {
+    background: url("header.jpg") no-repeat scroll 0 0 steelBlue;
+    height: 120px;
+}
+#header-name {
+    padding-top: 25px;
+    color: #fafafa;
+    font-size: 24px;
+}
+#header-link {
+    color: #fafafa;
+    font-weight: bold;
+    text-decoration: none;
+}
+#header-name span {
+    font-size: 24px;
+}
+#header-description {
+    color: #fafafa;
+    font-style: italic;
+}
+#header-logout-text, #header-logout-text a {
+    color: #fafafa;
+    text-decoration: none;
+}
+#welcomeMessage {
+    color: #fafafa;
+}
+#main {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-color: -moz-use-text-color #DDDDDD #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-style: none solid;
+    border-width: 0 1px 1px;
+    min-height: 345px;
+    width: 955px;
+}
+#sidebar {
+    -moz-border-radius: 0 0 20px 20px;
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 0 none;
+    margin: 0 0 30px 20px;
+    min-height: 450px;
+}
+#content {
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 10px 20px 20px 20px;
+    width: 705px;
+    min-height: 400px;
+    background: #D8D8D8;
+    border: solid 1px #BBBBBB;
+}
+.category {
+    margin: 3px 15px;
+    width: 168px;
+}
+.category-label {
+    background: url(menu.jpg) #5A8EC0;
+    color: #FFFFFF;
+}
+.category-label span {
+    display: block;
+    font-size: 16px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 31px;    
+}
+.category-label a {
+    color: white;
+    text-decoration: none;
+}
+.menu-container a {
+    color: #535353;
+    text-decoration: none;
+}
+.menu {
+    background: #D8D8D8;
+    border-bottom: 1px dotted #757471;
+    cursor: pointer;
+    padding: 10px;
+}
+#category-container .current, #category-container .current-category {
+    color: steelblue;
+    font-weight: bold;
+}
+.menu-link {
+    background: url("menu_arrow.jpg") no-repeat;
+}
+.menu-link span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+.menu-link:hover span {
+    color: #1C4F96;
+}
+.menu-container .current span {
+    color: #1F4282;
+    font-weight: bold;
+}
+#navigation {
+    width: 185px;
+    border: none;
+    min-height: 200px;
+}
+#footer {
+    color: #333333;
+    font-style: normal;
+    font-size: 11px;
+    text-align: center;
+}
+#footer-message {
+    background: none repeat scroll 0 0 #ECECEC;
+    border-color: -moz-use-text-color #DDDDDD #DDDDDD;
+    border-style: none solid;
+    border-width: 0 1px 1px;
+    background: url("footer.png") no-repeat scroll left bottom #ECECEC;
+    padding: 30px 50px 18px 50px;
+}
+#page th.sortable a {
+    font-size: 13px;
+}
+#page thead tr {
+    background-color: #DFDFDF;
+}
+body#login #content, body#unauthorize #content {
+    float: none;
+    min-height: 350px;
+    width: 890px;
+}
+#page h2 {
+    color: #042C54;    
+}
+#page h3 {
+    color: #1F4282;    
+}
+#page .form-section, .subform-section, #page #form-canvas {
+    background: none;
+}
+#page .form-section-title span, .subform-section-title span {
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    background: #1C4F96;
+    padding: 5px;
+    color: #f6f6f6;
+    text-shadow: none;
+    font-size: 14px;
+}
+#page .subform-container .subform-section-title span {
+    -moz-border-radius: 0px; 
+    -webkit-border-radius: 0px; 
+    background: darkGray;
+    padding: 5px;
+    color: #535353;
+    font-size: 14px;
+    margin: 0px;
+}
+#page .subform-container .subform-section {
+    padding: 2px;
+}
+body.embeded #page {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    background: none;
+}
+body.embeded #header, body.embeded #footer, body.embeded #navigation {
+    display: none;
+}
+body.embeded #content {
+    float: left;
+    width: 100%;
+    background: none;
+    border: none;
+}
+body.embeded {
+    background: none;
+}
+body.embeded #main {
+    border: none;
+    width: 100%;
+    background: #fafafa;
+}
+#page #loginForm table {
+    margin: 80px auto auto;
+}
+#page button, #page .form-button {
+    background: #2765AE;
+    border: none;
+    color: #f6f6f6;
+    cursor: pointer;
+    padding: 2px 5px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 0 2px #333333;
+    -webkit-box-shadow: 0 0 2px #333333;
+}

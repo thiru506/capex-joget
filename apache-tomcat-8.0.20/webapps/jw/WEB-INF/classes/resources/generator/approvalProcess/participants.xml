@@ -1,0 +1,8 @@
+<Participants>
+    <Participant Id="[prefix]approver" Name="%s">
+        <ParticipantType Type="ROLE"/>
+    </Participant>
+    <Participant Id="[prefix]applicant" Name="%s">
+        <ParticipantType Type="ROLE"/>
+    </Participant>
+</Participants>

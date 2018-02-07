@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+    <bean id="enhancedDirectoryManagerSessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <qualifier value="enhanceDirectory"/>
+        <property name="dataSource" ref="setupDataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>/org/joget/plugin/directory/model/UserExtra.hbm.xml</value>
+                <value>/org/joget/plugin/directory/model/UserPasswordHistory.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.transaction.jta.platform">org.joget.commons.util.AtomikosJtaPlatform</prop>
+                <prop key="hibernate.connection.release_mode">after_transaction</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="userExtraDao" class="org.joget.plugin.directory.dao.UserExtraDaoImpl">
+        <property name="sessionFactory" ref="enhancedDirectoryManagerSessionFactory" />
+    </bean>
+    
+    <bean id="userPasswordHistoryDao" class="org.joget.plugin.directory.dao.UserPasswordHistoryDaoImpl">
+        <property name="sessionFactory" ref="enhancedDirectoryManagerSessionFactory" />
+    </bean>
+    
+    <bean id="userSecurity" class="org.joget.plugin.directory.UserSecurityImpl">
+        <property name="userExtraDao" ref="userExtraDao" />
+        <property name="userPasswordHistoryDao" ref="userPasswordHistoryDao"/>
+    </bean>
+    
+    <!-- Security enhanced DataEncryption implementation -->
+    <bean id="dataEncryption" class="org.joget.apps.workflow.security.SecureDataEncryptionImpl">
+        <property name="salt" value="tVGR45EfdWEDFCVRTYGg4238KUFK)(*$"/>
+        <property name="key" value="vGH43!lgjfa@jgDs"/>
+    </bean>    
+    
+    <bean id="profilePropertyManager" class="org.joget.commons.util.DatasourceProfilePropertyManager" depends-on="securityUtil">
+        <property name="propertyClass" value="org.joget.apps.workflow.security.SecureProperties"/>
+    </bean>
+    
+    <bean id="securityUtil" class="org.joget.commons.util.SecurityUtil">
+        <property name="dataEncryption" ref="dataEncryption" />
+        <property name="nonceGenerator" ref="nonceGenerator" />
+    </bean>
+    
+    <bean id="nonceCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+        <property name="cacheManager" ref="cacheManager"/>
+    </bean>
+
+    <bean id="nonceGenerator" class="org.joget.apps.workflow.security.NonceGeneratorImpl">
+    </bean> 
+    
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* org.joget.plugin..*Dao.*(..))" order="1" />
+    </aop:config>
+    
+</beans>

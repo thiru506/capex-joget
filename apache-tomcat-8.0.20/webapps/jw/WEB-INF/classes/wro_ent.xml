@@ -1,0 +1,17 @@
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="bootstrap_theme.min">
+        <css>classpath:resources/themes/bootstrap/css/style.css</css>
+        <js>classpath:resources/themes/bootstrap/js/custom.js</js>
+    </group>
+    <group name="elegant_theme.min">
+        <css>classpath:resources/themes/elegant/css/style.css</css>
+        <js>classpath:resources/themes/elegant/js/custom.js</js>
+    </group>
+    <group name="janux_theme.min">
+        <css>classpath:resources/themes/janux/css/perfect-scrollbar.min.css</css>
+        <css>classpath:resources/themes/janux/css/style.css</css>
+        <css>classpath:resources/themes/janux/css/style-responsive.css</css>
+        <js>classpath:resources/themes/janux/js/perfect-scrollbar.jquery.min.js</js>
+        <js>classpath:resources/themes/janux/js/custom.js</js>
+    </group>
+</groups> 

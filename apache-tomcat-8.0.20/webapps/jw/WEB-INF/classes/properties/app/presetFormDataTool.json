@@ -1,0 +1,31 @@
+[{
+    title : '@@app.pfdt.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.pfdt.form@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options',
+        required : 'true'
+    },{
+        name : 'fields',
+        label : '@@app.pfdt.fields@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@app.pfdt.fieldId@@'
+        }],
+        required : 'true'
+    }]
+},
+{
+    title : '@@app.pfdt.data@@',
+    properties : [{
+        name : 'data',
+        label : '@@app.pfdt.data@@',
+        description : '@@app.pfdt.data.desc@@',
+        type : 'textarea',
+        rows : '8',
+        cols : '50',
+        required : 'true'
+    }]
+}]

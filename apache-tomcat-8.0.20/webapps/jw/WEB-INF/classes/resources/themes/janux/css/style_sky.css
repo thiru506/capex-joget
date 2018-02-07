@@ -1,0 +1,83 @@
+/*.white 
+{color: #000;}*/
+/*.header-nav a.btn 
+{color:#000 !important;}
+.header-nav .btn .caret 
+{border-bottom-color: #000 !important; border-top-color: #000 !important;}*/
+a.dropdown .fa,
+.nav-tabs.nav-stacked > li > a,
+.nav-tabs.nav-stacked > li > ul > li > a
+{color: #000;}
+/*.nav-tabs.nav-stacked > li > ul > li > a 
+{color: #fff;}*/
+.navbar,
+.navbar-inner, 
+.nav-tabs.nav-stacked > li.active.current-category > a,
+.nav-tabs.nav-stacked > li.current-category > a,
+.nav-tabs.nav-stacked > li > a:hover,
+.nav-tabs.nav-stacked > li > ul > li > a:hover,
+.nav-tabs.nav-stacked > li > a:focus,
+.nav-tabs.nav-stacked > li > ul > li > a:focus,
+a.brand span
+{background: #1E88D2 !important; color:#fff;}
+.navbar .brand 
+{color:#eee; text-shadow:none;}  
+footer,
+#sidebar
+{background: #74DBEE; color:#000 !important;}
+.nav-tabs.nav-stacked  > li.active > a,
+.nav-tabs.nav-stacked  > li > ul > li.active > a,
+.nav-tabs.nav-stacked  > li.active > a:hover,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:hover,
+.nav-tabs.nav-stacked  > li.active > a:focus,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:focus,
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.box-header,
+.navbar .header-nav
+{background: #3486C0; color:#fff;}
+.nav-tabs.nav-stacked  > li.active > a,
+.nav-tabs.nav-stacked  > li > ul > li.active > a,
+.nav-tabs.nav-stacked  > li.active > a:hover,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:hover,
+.nav-tabs.nav-stacked  > li.active > a:focus,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:focus
+{border-bottom: 1px solid #3486C0;}
+.box,
+body .dataList table
+{border: 2px solid #3486C0;}
+.header-nav .nav li:hover,
+.header-nav .nav li:focus,
+.dropdown-menu-title
+{background: #1751A5;}
+.dropdown-menu:after, .dropdown-menu:before 
+{border-bottom: 9px solid #1751A5 !important;}
+.btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+body .dataList td a, 
+body input.btn[type="submit"]
+{background-color: #3486C0; border-color: #3486C0; color:#fff}
+body .dataList th.sorted,
+body .dataList thead tr, 
+body .dataList thead tr a, 
+body .dataList thead tr a:visited,
+.navbar .nav > li > a
+{background-color: #3486C0; color:#fff}
+/*.breadcrumb,
+.form-section-title span, 
+.subform-section-title span
+{background-color: #f7f7f7; color:#000}*/
+@media only screen and (max-width: 767px) {
+    .navbar .navbar-inner .container-fluid {background: #3486C0 !important;}
+}

@@ -1,0 +1,23 @@
+[{
+    title : '@@app.fdut.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.fdut.form@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options',
+        required : 'true'
+    },{
+        name : 'fields',
+        label : '@@app.fdut.fields@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@app.fdut.fieldId@@'
+        },
+        {
+            key : 'value',
+            label : '@@app.fdut.value@@'
+        }],
+        required : 'true'
+    }]
+}]

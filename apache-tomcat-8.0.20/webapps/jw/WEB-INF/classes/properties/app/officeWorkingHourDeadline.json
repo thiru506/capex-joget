@@ -1,0 +1,60 @@
+[{
+    title : '@@app.officeworkinghourdeadline.config@@',
+    properties : [{
+        name : 'holidays',
+        label : '@@app.officeworkinghourdeadline.holidays@@',
+        type : 'grid',
+        columns : [{
+            key : 'date',
+            label : '@@app.officeworkinghourdeadline.date@@'
+        }]
+    },
+    {
+        name : 'weekends',
+        label : '@@app.officeworkinghourdeadline.weekends@@',
+        type : 'checkbox',
+        value : '1;7',
+        options : [{
+            value : '1',
+            label : '@@app.officeworkinghourdeadline.sunday@@'
+        },
+        {
+            value : '2',
+            label : '@@app.officeworkinghourdeadline.monday@@'
+        },
+        {
+            value : '3',
+            label : '@@app.officeworkinghourdeadline.tuesday@@'
+        },
+        {
+            value : '4',
+            label : '@@app.officeworkinghourdeadline.wednesday@@'
+        },
+        {
+            value : '5',
+            label : '@@app.officeworkinghourdeadline.thursday@@'
+        },
+        {
+            value : '6',
+            label : '@@app.officeworkinghourdeadline.friday@@'
+        },
+        {
+            value : '7',
+            label : '@@app.officeworkinghourdeadline.saturday@@'
+        }]
+    },
+    {
+        name : 'workingHourFrom',
+        label : '@@app.officeworkinghourdeadline.from@@',
+        type : 'textfield',
+        value : '0900',
+        required : 'True'
+    },
+    {
+        name : 'workingHourTo',
+        label : '@@app.officeworkinghourdeadline.to@@',
+        type : 'textfield',
+        value : '1800',
+        required : 'True'
+    }]
+}]

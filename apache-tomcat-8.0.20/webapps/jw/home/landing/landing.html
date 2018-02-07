@@ -1,0 +1,169 @@
+<div id="landing">
+    <div id="landing-title">Welcome to the Employee Self-Service Portal</div>
+    
+    <div id="container">
+        <div id="slides">
+            <div class="slides_container">
+                <img src="/jw/home/landing/images/slider_01.png" width="639" height="296" alt="Slide 1"/>
+                <img src="/jw/home/landing/images/slider_02.png" width="639" height="296" alt="Slide 2" />
+                <img src="/jw/home/landing/images/slider_03.png" width="639" height="296" alt="Slide 3" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/jw/home/landing/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/jw/home/landing/js/slides.min.jquery.js"></script>
+    <script type="text/javascript" src="/jw/home/landing/js/jquery.simplyscroll.min.js"></script>
+    <script>
+        $(function(){
+            $('#slides').slides({
+                preload: true,
+                preloadImage: 'images/loading.gif',
+                play: 5000,
+                pause: 2500,
+                hoverPause: false
+            });
+        });
+        (function($) {
+            $(function() {
+                $("#scroller").simplyScroll({
+                    autoMode: 'loop'
+                });
+            });
+        })(jQuery);
+    </script>
+<!--    
+    <div id="landing-splash">
+        <div id="landing-splash-title">
+            Amazing Efficiency
+        </div>
+        <div id="landing-splash-subtitle">
+            Get things done right with workflow
+        </div>
+        &nbsp;
+    </div>
+-->    
+    <div id="landing-banner">Fast, efficient online service for your needs</div>
+    <div id="landing-table">
+        <div class="landing-column">
+            <div class="landing-column-bg">
+                <h2>Published Apps</h2>
+                <ul id="published-apps" class="landing-ul">
+                    <li>
+                        <h3>General Services</h3>
+                        <ul class="landing-ul2">
+                            <li> <a href="#"> <span class="landing-li-title">Internal Service Request</span> <span class="landing-li-description">Make and track requests between departments</span> </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>HR Apps</h3>
+                        <ul class="landing-ul2">
+                            <li> <a href="#"> <span class="landing-li-title">HR Expenses Claims App</span> <span class="landing-li-description">Request and track expenses</span> </a> </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Purchasing</h3>
+                        <ul class="landing-ul2">
+                            <li> <a href="#"> <span class="landing-li-title">Purchase Requisition App</span> <span class="landing-li-description">Request and track purchases</span> </a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="my-inbox">
+                <h2>My Inbox</h2>
+                <div id="inbox1"><img src="/jw/images/v3/portlet_loading.gif" alt="" /></div>
+                <script type="text/javascript">// <![CDATA[
+                    $(document).ready(function(){ $.getScript('/jw/web/js/client/inbox.js?id=1&rows=5&divId=inbox1',null); });
+                    // ]]></script>
+            </div>
+        </div>
+        <div class="landing-column">
+            <div id="landing-col-image">&nbsp;</div>
+            <h2>Announcements</h2>
+            <ul class="landing-ul">
+                <li>
+                    <h3>New Services Published</h3>
+                    <ul class="landing-ul2">
+                        <li>New services are now available from the published apps on the left.</li>
+                        <li>Make requests, approvals and statuses at your convenience</li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="landing-col-image">&nbsp;</div>
+            <h2>Why Use This Portal?</h2>
+            <ul class="landing-ul">
+                <li>
+                    <h3>Improve Communications</h3>
+                    <ul class="landing-ul2">
+                        <li>Improve communications within the organization</li>
+                        <li>Foster better collaboration and efficiency</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Reduce Costs</h3>
+                    <ul class="landing-ul2">
+                        <li>Increase productivity</li>
+                        <li>Minimize paperwork and reduce operational costs</li>
+                    </ul>
+                </li>
+            </ul>
+            <div id="landing-col-image">&nbsp;</div>
+            <h2>How This Portal Works</h2>
+            <ul class="landing-ul">
+                <li>
+                    <h3>Self-Service Apps</h3>
+                    <ul class="landing-ul2">
+                        <li>Login using your account</li>
+                        <li>Access the published apps to manage your requests and information</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Workflow Inbox and Pending Tasks</h3>
+                    <ul class="landing-ul2">
+                        <li>Manage your task inbox</li>
+                        <li>Get notified of pending tasks</li>
+                        <li>Participate in workflow processes</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">// <![CDATA[
+    function loadApps() {
+        // show loading icon
+        $("#published-apps").empty();
+        var loading = $('<div id="apps-loading"><img src="/jw/images/v3/portlet_loading.gif" /></div>');
+        $("#published-apps").append(loading);
+                                    
+        // load JSON
+        $.ajax({ 
+            url : "/jw/web/json/apps/published/userviews",
+            dataType:'jsonp',
+            success:function(data) {
+                var content = "";
+                var apps = data.apps;
+                for( var i=0; i<apps.length; i++) {
+                    // add app
+                    var app = apps[i];
+                    content += '<li><h3>' + app.name + '</h3><ul class="landing-ul2">';
+                    // add userviews
+                    var userviews = apps[i].userviews;
+                    for( var j=0; j<userviews.length; j++){
+                        var uv = userviews[j];
+                        content += '<li><a target="_blank" href="' + uv.url + '">\
+                                                        <span class="landing-li-title">' + uv.name + '</span>\
+                                                        </a></li>';
+                    }
+                    content += "</ul>";
+                }
+
+                // show apps, hide loading icon
+                $(loading).remove();
+                $("#published-apps").append($(content));
+            }
+        });
+                                    
+                                    
+    }
+    $(document).ready(loadApps);
+    // ]]></script>

@@ -1,0 +1,23 @@
+{
+    "id": "%s",
+    "name": "%s",
+    "pageSize": 0,
+    "order": "",
+    "orderBy": "",
+    "showPageSizeSelector": "true",
+    "pageSizeSelectorOptions": "10,20,30,40,50,100",
+    "buttonPosition": "bottomLeft",
+    "checkboxPosition": "left",
+    "useSession": "false",
+    "actions": [],
+    "rowActions": [],
+    "binder": {
+        "className": "org.joget.plugin.enterprise.AdvancedFormRowDataListBinder",
+        "properties": {
+            "formDefId": "%s"
+            %s
+        }
+    },
+    "filters": [%s],
+    "columns": [%s]
+}

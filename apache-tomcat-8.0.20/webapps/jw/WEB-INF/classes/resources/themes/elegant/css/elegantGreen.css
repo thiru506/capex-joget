@@ -1,0 +1,8 @@
+#header .navbar-fixed-top .navbar-inner, #header .navbar-fixed-bottom .navbar-inner {
+    background: #39836C;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+    background: #39836C;
+}

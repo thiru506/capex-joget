@@ -1,0 +1,185 @@
+[{
+    title : '@@app.exportformemailtool.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.exportformemailtool.form@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options',
+        required : 'True'
+    },
+    {
+        name : 'fileName',
+        label : '@@app.exportformemailtool.filename@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'hideEmptyValueField',
+        label : '@@app.exportformemailtool.hideEmptyValueField@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'showNotSelectedOptions',
+        label : '@@app.exportformemailtool.showNotSelectedOptions@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.smtpSetting@@',
+    properties : [{
+        name : 'host',
+        label : '@@app.exportformemailtool.host@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'port',
+        label : '@@app.exportformemailtool.port@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'security',
+        label : '@@app.exportformemailtool.security@@',
+        type : 'selectbox',
+        options : [{
+            value : '',
+            label : ''
+        },
+        {
+            value : 'TLS',
+            label : '@@app.exportformemailtool.security.tls@@'
+        },
+        {
+            value : 'SSL',
+            label : '@@app.exportformemailtool.security.ssl@@'
+        }]
+    },
+    {
+        name : 'username',
+        label : '@@app.exportformemailtool.username@@',
+        type : 'textfield'
+    },
+    {
+        name : 'password',
+        label : '@@app.exportformemailtool.password@@',
+        type : 'password'
+    }],
+    buttons : [{
+        name : 'testmail',    
+        label : '@@app.emailtool.sendTestMail@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/app[APP_PATH]/plugin/org.joget.apps.app.lib.EmailTool/service?action=testmail',
+        fields : ['host', 'port', 'security', 'username', 'password'],
+        addition_fields : [
+            {
+                name : 'from',
+                label : '@@app.emailtool.from@@',
+                type : 'textfield',
+                required : 'True'
+            },
+            {
+                name : 'toSpecific',
+                label : '@@app.emailtool.toEmail@@',
+                type : 'textfield',
+                required : 'True'
+            }
+        ]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.emailInfo@@',
+    properties : [{
+        name : 'from',
+        label : '@@app.exportformemailtool.from@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'toSpecific',
+        label : '@@app.exportformemailtool.toEmail@@',
+        type : 'textfield'
+    },
+    {
+        name : 'toParticipantId',
+        label : '@@app.exportformemailtool.toParticipant@@',
+        type : 'textfield'
+    },
+    {
+        name : 'cc',
+        label : '@@app.exportformemailtool.cc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'bcc',
+        label : '@@app.exportformemailtool.bcc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'subject',
+        label : '@@app.exportformemailtool.subject@@',
+        type : 'textfield'
+    },
+    {
+        name : 'message',
+        label : '@@app.exportformemailtool.message@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '15'
+    },
+    {
+        name : 'isHtml',
+        label : '@@app.exportformemailtool.isHtml@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.exportformemailtool.advanced@@',
+    properties : [{
+        name : 'formatting',
+        label : '@@app.exportformemailtool.formatting@@',
+        type : 'codeeditor',
+        mode : 'css'
+    },
+    {
+        name : 'headerHtml',
+        label : '@@app.exportformemailtool.headerHtml@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'repeatHeader',
+        label : '@@app.exportformemailtool.repeatHeader@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'footerHtml',
+        label : '@@app.exportformemailtool.footerHtml@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'repeatFooter',
+        label : '@@app.exportformemailtool.repeatFooter@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+}]

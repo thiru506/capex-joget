@@ -1,0 +1,153 @@
+.multiPagedForm .page-nav-panel ul,
+.multiPagedForm .page-nav-panel li{
+    list-style: none;
+}
+
+.multiPagedForm .page-nav-panel .nav_item button{
+    background:transparent;
+    border:0;
+    cursor:pointer;
+    color: #BBB
+}
+
+.multiPagedForm .page-nav-panel .nav_item.current button{
+    font-weight: bold;
+    color: #000;
+}
+
+.multiPagedForm.wizard .page-nav-panel .nav_item{
+    float:left;
+}
+
+.multiPagedForm.tab .page-nav-panel .nav_item{
+    float:left;
+}
+
+.multiPagedForm.wizard .page-nav-panel .nav_item{
+    float:left;
+    background:#fff url(images/arrow_right.png) no-repeat right center;
+    padding-right:15px;
+}
+
+.multiPagedForm.wizard .page-nav-panel .nav_item:last-child{
+    background-image:none;
+}
+
+.multiPagedForm.wizard .page-nav-panel button{
+    float:left;
+    border:0;
+}
+
+.multiPagedForm.tab .page-nav-panel .nav_item button{
+    float:left;
+    background:#eee;
+    margin: 0 1px;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-bottom: 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -khtml-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    font-weight: bold;
+}
+
+.multiPagedForm.tab .page-nav-panel .nav_item.current button{
+    background:#FFF;
+    color:#000;
+    margin-bottom: -2px;
+    padding-bottom: 7px;
+}
+
+.multiPagedForm.tab .page-nav-panel{
+    border-bottom: 2px solid #eee;
+    margin-bottom: 5px;
+}
+
+.multiPagedForm .page-button-panel{
+    text-align:right;
+}
+
+.multiPagedForm .page-nav-panel.bottom{
+    display:none;
+}
+
+.mpf-container .subform-section{
+    background:transparent;
+}
+
+.multiPagedForm .page-nav-panel .nav_item.error button span{
+    color: red;
+}
+
+@media (max-width: 767px) {
+    .multiPagedForm .page-nav-panel.bottom{
+        display:block;
+    }
+    
+    .multiPagedForm .page-nav-panel ul {
+        padding:0;
+        margin:0;
+    }
+    
+    .multiPagedForm .page-button-panel,
+    .multiPagedForm .page-nav-panel.top ul li.after,
+    .multiPagedForm .page-nav-panel.bottom ul li.current,
+    .multiPagedForm .page-nav-panel.bottom ul li.before{
+        display:none;
+    }
+    
+    .multiPagedForm.wizard .page-nav-panel,
+    .multiPagedForm.tab .page-nav-panel{
+        border-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .multiPagedForm.wizard .page-nav-panel .nav_item,
+    .multiPagedForm.tab .page-nav-panel .nav_item{
+        float:none;
+        display:block;
+        background: none;
+        padding-right:0;
+    }
+    
+    .multiPagedForm.wizard .page-nav-panel .nav_item button,
+    .multiPagedForm.tab .page-nav-panel .nav_item button{
+        text-align:left;
+        float:none;
+        display:block;
+        width: 100%;
+        background: #f5f5f5;
+        border:#ddd solid 1px;
+        padding:8px;
+        margin:0;
+        margin-bottom: 3px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        -khtml-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+    }
+    
+    .multiPagedForm.wizard .page-nav-panel .nav_item.current button:disabled,
+    .multiPagedForm.tab .page-nav-panel .nav_item.current button:disabled,
+    .multiPagedForm.wizard .page-nav-panel .nav_item.current button,
+    .multiPagedForm.tab .page-nav-panel .nav_item.current button{
+        background: #f5f5f5;
+        color:#000 ;
+        font-weight: bold;
+        margin-bottom: 0px;
+        padding-bottom: 8px;
+        -moz-border-radius: 5px 5px 0px 0px;
+        -webkit-border-radius: 5px 5px 0px 0px;
+        -khtml-border-radius: 5px 5px 0px 0px;
+        border-radius: 5px 5px 0px 0px;
+    }
+    
+    .multiPagedForm .page-container {
+        border:#ddd solid 1px;
+        border-top:0px;
+        padding: 5px;
+        border-radius: 0px 0px 5px 5px;
+        margin-bottom: 3px;
+    }
+}

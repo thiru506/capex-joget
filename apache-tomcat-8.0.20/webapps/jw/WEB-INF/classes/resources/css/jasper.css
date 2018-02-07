@@ -1,0 +1,20 @@
+div.exportlinks {
+    margin: 2px 0 10px;
+    padding: 2px 4px;
+    text-align: right;
+}
+div.exportlinks a {
+    text-decoration: none;
+    margin-right: 5px;
+}
+span.export {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 4px 1px 20px;
+}
+span.excel {
+    background: url("../images/doc_excel.png") no-repeat;
+}
+span.pdf {
+    background: url("../images/doc_pdf.png") no-repeat;
+}

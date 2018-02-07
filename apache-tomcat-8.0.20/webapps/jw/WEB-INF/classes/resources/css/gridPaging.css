@@ -1,0 +1,8 @@
+.pg-navigator .pg-current {
+    font-weight : bold;
+}
+
+tr.pg-tr-hide {
+    display:none;
+}
+

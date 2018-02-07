@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app>
+    <container-descriptor>
+        <prefer-web-inf-classes>false</prefer-web-inf-classes>
+        <prefer-application-packages>
+            <package-name>antlr.*</package-name>
+            <package-name>org.mozilla.classfile.*</package-name>
+            <package-name>org.mozilla.javascript.*</package-name>
+            <package-name>org.slf4j.*</package-name>
+            <package-name>org.apache.commons.*</package-name>
+            <package-name>javassist.*</package-name>
+        </prefer-application-packages>
+        <prefer-application-resources>
+            <resource-name>org/slf4j/impl/StaticLoggerBinder.class</resource-name>
+        </prefer-application-resources>
+        <servlet-reload-check-secs>-1</servlet-reload-check-secs>
+        <resource-reload-check-secs>-1</resource-reload-check-secs>
+    </container-descriptor>
+    <session-descriptor>
+    </session-descriptor>
+</weblogic-web-app>

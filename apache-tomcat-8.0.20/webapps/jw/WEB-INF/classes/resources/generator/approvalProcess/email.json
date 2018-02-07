@@ -1,0 +1,17 @@
+{
+    "host": "#envVariable.smtp_host#",
+    "port": "#envVariable.smtp_port#",
+    "security": "",
+    "username": "#envVariable.smtp_username#",
+    "password": "#envVariable.smtp_password#",
+    "from": "#envVariable.smtp_from#",
+    "toSpecific": "",
+    "toParticipantId": "%sapplicant",
+    "cc": "",
+    "subject": "%s",
+    "message": "%s",
+    "isHtml": "true",
+    "formDefId": "",
+    "fields": [],
+    "files": []
+}

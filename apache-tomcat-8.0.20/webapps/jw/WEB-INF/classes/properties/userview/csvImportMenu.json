@@ -1,0 +1,124 @@
+[{
+    title : '@@userview.csvimportmenu.editCsvImport@@',
+    properties : [{
+        name : 'id',
+        label : 'ID',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.csvimportmenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.csvimportmenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.csvimportmenu.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : 'List'
+    },
+    {
+        name : 'formDefId',
+        label : '@@userview.csvimportmenu.formId@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'columnMapping',
+        label : '@@userview.csvimportmenu.columnMapping@@',
+        type : 'grid',
+        columns : [{
+            key : 'col',
+            label : '@@userview.csvimportmenu.columnNumber@@'
+        },
+        {
+            key : 'field',
+            label : '@@userview.csvimportmenu.fieldName@@'
+        }]
+    },
+    {
+        name : 'key',
+        label : '@@userview.csvimportmenu.keyColumnNumber@@',
+        type : 'textfield'
+    },
+    {
+        name : 'rowStart',
+        label : '@@userview.csvimportmenu.startRowNumber@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@userview.csvimportmenu.actions@@',
+    properties : [{
+        name : 'corfirmation',
+        label : '@@userview.csvimportmenu.corfirmation@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '5'
+    },
+    {
+        name : 'messageOnError',
+        label : '@@userview.csvimportmenu.messageOnError@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '5'
+    },
+    {
+        name : 'messageOnSuccess',
+        label : '@@userview.csvimportmenu.messageAfterImported@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '5'
+    },
+    {
+        name : 'redirectUrl',
+        label : '@@userview.csvimportmenu.redirection@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@userview.csvimportmenu.ui@@',
+    properties : [{
+        name : 'customHeader',
+        label : '@@userview.csvimportmenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'customFooter',
+        label : '@@userview.csvimportmenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'disabledDelete',
+        label : '@@userview.csvimportmenu.disabledDelete@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@userview.csvimportmenu.advanced@@',
+    properties : [{
+        name : 'userviewKey',
+        label : '@@userview.csvimportmenu.userviewKeyName@@',
+        type : 'textfield'
+    },
+    {
+        name : 'checkUTF8',
+        label : '@@userview.csvimportmenu.checkforUTF8@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+}]

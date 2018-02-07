@@ -1,0 +1,266 @@
+[{
+    title : '@@app.csvimporttool.config@@',
+    properties : [{
+        name : 'fileUploadFormDefId',
+        label : '@@app.csvimporttool.uploadFormId@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'field',
+        label : '@@app.csvimporttool.uploadField@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'formDefId',
+        label : '@@app.csvimporttool.storeFormId@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'columnMapping',
+        label : '@@app.csvimporttool.columnMapping@@',
+        type : 'grid',
+        columns : [{
+            key : 'col',
+            label : '@@app.csvimporttool.columnNumber@@'
+        },
+        {
+            key : 'field',
+            label : '@@app.csvimporttool.fieldName@@'
+        }]
+    },
+    {
+        name : 'key',
+        label : '@@app.csvimporttool.keyColumnNumber@@',
+        type : 'textfield'
+    },
+    {
+        name : 'rowStart',
+        label : '@@app.csvimporttool.startFormRowNumber@@',
+        type : 'textfield'
+    },
+    {
+        name : 'foreignKeys',
+        label : '@@app.csvimporttool.foreignKeys@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@app.csvimporttool.fieldName@@'
+        },
+        {
+            key : 'value',
+            label : '@@app.csvimporttool.value@@'
+        }]
+    },
+    {
+        name : 'mode',
+        label : '@@userview.csvimportmenu.importMode@@',
+        type : 'selectbox',
+        value : '',
+        options : [{
+            value : '',
+            label : '@@userview.csvimportmenu.importMode.new_update@@'
+        },
+        {
+            value : 'NEW',
+            label : '@@userview.csvimportmenu.importMode.new@@'
+        },
+        {
+            value : 'DELETE',
+            label : '@@userview.csvimportmenu.importMode.delete@@'
+        }]
+    },
+    {
+        name : 'validateData',
+        label : '@@userview.csvimportmenu.validateData@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'checkUTF8',
+        label : '@@userview.csvimportmenu.checkforUTF8@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'debug',
+        label : '@@ldapdirectorymanager.debug@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+},
+{
+    title : '@@app.csvimporttool.importStatus@@',
+    properties : [{
+        label : '@@app.csvimporttool.storeToWorkflowVariable@@',
+        type : 'header'
+    },
+    {
+        name : 'wf_recordsCount',
+        label : '@@app.csvimporttool.recordsCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successImportedCount',
+        label : '@@app.csvimporttool.successImportedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successUpdatedCount',
+        label : '@@app.csvimporttool.successUpdatedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successDeletedCount',
+        label : '@@app.csvimporttool.successDeletedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_skippedCount',
+        label : '@@app.csvimporttool.skippedCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_validationErrorCount',
+        label : '@@app.csvimporttool.validationErrorCount@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successImportedRows',
+        label : '@@app.csvimporttool.successImportedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successUpdatedRows',
+        label : '@@app.csvimporttool.successUpdatedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_successDeletedRows',
+        label : '@@app.csvimporttool.successDeletedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_skippedRows',
+        label : '@@app.csvimporttool.skippedRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_validationErrorRows',
+        label : '@@app.csvimporttool.validationErrorRows@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_validationErrorRowDetails',
+        label : '@@app.csvimporttool.validationErrorRowDetails@@ (@@app.csvimporttool.workflowVariableName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'wf_validationErrorRowDetailsFormat',
+        label : '@@app.csvimporttool.validationErrorRowDetailsFormat@@',
+        type : 'selectbox',
+        value : 'table',
+        options : [{
+            value : 'table',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.table@@'
+        },
+        {
+            value : 'json',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.json@@'
+        }]
+    },
+    {
+        label : '@@app.csvimporttool.storeToUploadForm@@',
+        type : 'header'
+    },
+    {
+        name : 'fi_recordsCount',
+        label : '@@app.csvimporttool.recordsCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successImportedCount',
+        label : '@@app.csvimporttool.successImportedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successUpdatedCount',
+        label : '@@app.csvimporttool.successUpdatedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successDeletedCount',
+        label : '@@app.csvimporttool.successDeletedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_skippedCount',
+        label : '@@app.csvimporttool.skippedCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_validationErrorCount',
+        label : '@@app.csvimporttool.validationErrorCount@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successImportedRows',
+        label : '@@app.csvimporttool.successImportedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successUpdatedRows',
+        label : '@@app.csvimporttool.successUpdatedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_successDeletedRows',
+        label : '@@app.csvimporttool.successDeletedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_skippedRows',
+        label : '@@app.csvimporttool.skippedRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_validationErrorRows',
+        label : '@@app.csvimporttool.validationErrorRows@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_validationErrorRowDetails',
+        label : '@@app.csvimporttool.validationErrorRowDetails@@ (@@app.csvimporttool.fieldName@@)',
+        type : 'textfield'
+    },
+    {
+        name : 'fi_validationErrorRowDetailsFormat',
+        label : '@@app.csvimporttool.validationErrorRowDetailsFormat@@',
+        type : 'selectbox',
+        value : 'table',
+        options : [{
+            value : 'table',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.table@@'
+        },
+        {
+            value : 'json',
+            label : '@@app.csvimporttool.validationErrorRowDetailsFormat.json@@'
+        }]
+    }]
+}]

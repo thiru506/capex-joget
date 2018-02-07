@@ -1,0 +1,37 @@
+{
+    "className": "org.joget.apps.userview.model.UserviewCategory",
+    "properties": {
+        "id": "category-%s",
+        "label": "%s"
+    },
+    "menus": [{
+            "className": "org.joget.plugin.enterprise.DataListInboxMenu",
+            "properties": {
+                "id": "%s",
+                "customId": "%s",
+                "label": "%s",
+                "datalistId": "%s",
+                "appFilter": "all",
+                "processId": "approver_process",
+                "activityDefId": "",
+                "rowCount": "true",
+                "list-customHeader": "",
+                "list-customFooter": "",
+                "assignment-customHeader": "",
+                "assignment-customFooter": ""
+            }
+        }, {
+            "className": "org.joget.apps.userview.lib.RunProcess",
+            "properties": {
+                "id": "%s",
+                "customId": "%s",
+                "label": "%s",
+                "processDefId": "%s",
+                "runProcessDirectly": "Yes",
+                "showInPopupDialog": "",
+                "messageShowAfterComplete": "",
+                "redirectUrlAfterComplete": "",
+                "keyName": ""
+            }
+        }]
+}

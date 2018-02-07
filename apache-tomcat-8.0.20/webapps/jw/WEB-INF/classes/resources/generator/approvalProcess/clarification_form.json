@@ -1,0 +1,158 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "%s",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "tableName": "%s",
+        "name": "%s",
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "elementUniqueKey": "5013"
+    },
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.SubForm",
+                "properties": {
+                    "id": "subform",
+                    "formDefId": "%s",
+                    "readonlyLabel": "",
+                    "subFormParentId": "",
+                    "loadBinder": {
+                        "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                        "properties": {}
+                    },
+                    "storeBinder": {
+                        "className": "org.joget.apps.form.lib.WorkflowFormBinder",
+                        "properties": {}
+                    },
+                    "label": "",
+                    "noframe": "true",
+                    "parentSubFormId": "",
+                    "readonly": "",
+                    "elementUniqueKey": "5020"
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {
+                "width": "100%%",
+                "elementUniqueKey": "5018"
+            }
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "id": "section1",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityControl": "",
+            "regex": "",
+            "visibilityValue": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "elementUniqueKey": "5014"
+        }
+    }, {
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.plugin.enterprise.FormGrid",
+                "properties": {
+                    "errorMessage": "Invalid number of rows.",
+                    "formDefId": "%s",
+                    "readonlyLabel": "true",
+                    "showRowNumber": "",
+                    "submit-label-readonly": "Close",
+                    "validateMinRow": "",
+                    "width": "900",
+                    "submit-label-normal": "Submit",
+                    "storeBinder": {
+                        "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                        "properties": {
+                            "formDefId": "%s",
+                            "foreignKey": "parent_id"
+                        }
+                    },
+                    "label": "",
+                    "validateMaxRow": "",
+                    "id": "field2",
+                    "height": "500",
+                    "sortField": "sort",
+                    "loadBinder": {
+                        "className": "org.joget.plugin.enterprise.MultirowFormBinder",
+                        "properties": {
+                            "formDefId": "%s",
+                            "foreignKey": "parent_id"
+                        }
+                    },
+                    "disabledDelete": "true",
+                    "enableSorting": "",
+                    "disabledAdd": "true",
+                    "readonly": "true",
+                    "elementUniqueKey": "5027",
+                    "options": [{
+                        "formatType": "text",
+                        "width": "",
+                        "value": "approver",
+                        "label": "%s",
+                        "format": ""
+                    }, {
+                        "formatType": "text",
+                        "width": "",
+                        "value": "status",
+                        "label": "%s",
+                        "format": ""
+                    }, {
+                        "formatType": "html",
+                        "width": "",
+                        "value": "remarks",
+                        "label": "%s",
+                        "format": ""
+                    }, {
+                        "formatType": "text",
+                        "width": "",
+                        "value": "approval_date",
+                        "label": "%s",
+                        "format": ""
+                    }]
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {
+                "width": "100%%",
+                "elementUniqueKey": "5025"
+            }
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "id": "section2",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityControl": "",
+            "regex": "",
+            "visibilityValue": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "%s",
+            "elementUniqueKey": "5021"
+        }
+    }]
+}

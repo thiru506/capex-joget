@@ -1,0 +1,38 @@
+*, a { font-family: Ubuntu, Tahoma, Arial; }
+body { padding-top: 40px; position: relative; }
+#page { width: auto; border-left:0; border-right: 0;}
+#header, #main, #footer { border-bottom: 0;}
+#main #navigation, #main #content {padding-top: 20px}
+#header-message {display: none;}
+#navigation { border-right: 0; float: none; width: auto; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px gray #ddd; margin-top: 10px; padding : 15px; background-color: #F2F2F2; -webkit-box-shadow: 2px 2px 11px rgba(50, 50, 50, 0.67); -moz-box-shadow: 2px 2px 11px rgba(50, 50, 50, 0.67); box-shadow: 2px 2px 11px rgba(50, 50, 50, 0.67);}
+#content {display:none;}
+#login #content {display: block; float: none; width: auto;}
+body.embeded #content, #content.main-content {display: block; float: none; width: auto;}
+#footer {background-color: #F5F5F5; border-top: 1px solid #E5E5E5; margin-top: 70px; padding: 30px 0; text-align: center; color: #777777;}
+.subform-container { background: #F9FFFF; }
+.label { background: none; text-shadow: none }
+.category-label { background: none; font-weight: bold }
+.category-label a { color: #005580; text-decoration: none; }
+.category-label i { background: #005580; color: white; padding: 2px 3px; border-radius: 10px; }
+.category-label span { display: block; font-size: 14px; padding: 5px; }
+#category-container .current { background: #9EAEB3; }
+.menu-container .current span { color: #EEEEE7; font-weight: bold; }
+.menu { border: none; margin: 0 25px; padding: 5px;}
+.navbar .btn {margin-left: 2px;}
+.menu-container a { color: #535353; text-decoration: none; }
+.category { margin-bottom: 15px; }
+.form-cell label.label, .subform-cell label.label  {padding: 2px 0; white-space: normal;}
+.hero-unit { margin-bottom: 2px; margin-top:10px; text-align: center; box-shadow: 0px 0px 10px black; padding: 5px; position:relative;}
+.carousel { margin-bottom: 0px; }
+.carousel .item { padding: 60px;}
+#form-canvas i[class^="icon-"]{font-family: FontAwesome;}
+.dataList th { border-right: 1px solid #FFFFFF;}
+.dataList th.row_action { border-right: 0;}
+input.btn[type="submit"] { padding: 0px 12px 0px; min-height: 30px }
+.boxy-wrapper .title-bar a.close { color: white; opacity: 0.8 }
+body.embeded #page { width: auto;}
+body.embeded {padding-top: 0px;}
+body.embeded #main #content {padding-top: 0px}
+textarea[cols]{width:auto;}
+textarea[rows]{height:auto;}
+input[size]{width:auto;}

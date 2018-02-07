@@ -1,0 +1,15 @@
+[
+    %s,
+    {
+        title : '@@app.edm.label.addonDirectorManager@@',
+        properties : [
+            {
+                name : 'dm1',
+                label : '@@app.edm.label.addon@@',
+                type : 'elementselect',
+                options_ajax : '[CONTEXT_PATH]/web/json/plugin/org.joget.plugin.directory.SecureDirectoryManager/service',
+                url : '[CONTEXT_PATH]/web/property/json[APP_PATH]/getPropertyOptions'
+            }%s
+        ]
+    }
+]

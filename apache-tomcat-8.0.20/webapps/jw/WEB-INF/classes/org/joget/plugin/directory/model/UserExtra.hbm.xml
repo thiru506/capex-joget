@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class entity-name="UserExtra" name="org.joget.plugin.directory.model.UserExtra" table="dir_user_extra">
+    <id column="username" name="username" type="string"/>
+    <property column="algorithm" name="algorithm" type="string"/>
+    <property column="loginAttempt" name="loginAttempt" type="integer"/>
+    <property column="failedloginAttempt" name="failedloginAttempt" type="integer"/>
+    <property column="lastLogedInDate" name="lastLogedInDate" type="timestamp"/>
+    <property column="lockOutDate" name="lockOutDate" type="timestamp"/>
+    <property column="lastPasswordChangeDate" name="lastPasswordChangeDate" type="timestamp"/>
+    <property column="requiredPasswordChange" name="requiredPasswordChange" type="boolean"/>
+    <property column="noPasswordExpiration" name="noPasswordExpiration" type="boolean"/>
+  </class>
+</hibernate-mapping>

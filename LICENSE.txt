@@ -1,0 +1,64 @@
+END-USER LICENSE AGREEMENT
+=============================
+
+NOTICE: BY DOWNLOADING AND INSTALLING, COPYING OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY THE TERMS OF THIS EULA. IF YOU DO NOT AGREE TO THE TERMS OF THIS EULA, YOU MAY NOT DOWNLOAD, INSTALL, COPY OR USE THE SOFTWARE
+
+1 DEFINITIONS
+
+1.1 "The Licensor" means Joget, Inc.
+
+1.2 "Plugin" means additional modules that may be provided with and/or used in conjunction with the Software for which you have paid the applicable license fee and accepted any applicable additional license terms.
+
+1.3 "Open Source Software" means various open source software components licensed under the terms of applicable open source license agreements included in the materials relating to such software. Open Source Software is composed of individual software components, each of which has its own copyright and its own applicable license conditions. The Open Source Software licenses can be found in the NOTICE.txt file.
+
+1.4 "App" or “Sample App” means apps, software applications or computer programs that are developed with the Software; to run on the Software and that may be distributed with the Software.
+
+1.5 "Software" means the Joget Workflow Enterprise software product that is licensed to you under this EULA, including, but not limited to, Plugins, Sample Apps, any related components purchased or provided with the Software, application programming interfaces, associated media, printed materials, online or electronic documentation, and any updates and maintenance releases thereto.
+
+1.6 "Software License Key" means, if applicable, a serial number issued to you to activate and use the Software.
+
+2 GRANT AND USE RIGHTS FOR SOFTWARE.
+
+2.1 License. The Software is licensed, not sold. Subject to the terms of this EULA, the Licensor hereby grants you a non-exclusive, non-transferable license, without rights to sublicense, to use the object code of the Software for the purpose as set forth in the applicable documentation for the Software and to the extent permitted by your payment of applicable license fees under an approved licensing model and/or your Software License Key subject to the software product specific terms specified in this EULA. 
+
+2.2 License Limitations. You may not copy the Software except for a reasonable number of machine-readable copies of the Software for backup or archival purposes and except as expressly permitted in this EULA. You may not remove any titles, trademarks or trade names, copyright notices, legends, or other proprietary markings on the Software. You are not granted any rights to any trademarks or service marks of the Licensor. The Licensor retains all rights not expressly granted to you.
+
+2.3 Restrictions. You may not (i) sell, lease, license, sublicense, distribute or otherwise transfer in whole or in part the Software or the Software License Key to another party; (ii) provide, disclose, divulge or make available to, or permit use of the Software in whole or in part by, any third party without the Licensor's prior written consent; or (iii) modify or create derivative works based upon the Software. Except to the extent expressly permitted by applicable law, and to the extent that the Licensor is not permitted by that applicable law to exclude or limit the following rights, you may not decompile, disassemble, reverse engineer, or otherwise attempt to derive source code from the Software, in whole or in part.
+
+2.4 External Plugins and Apps. Additional Plugins and Apps that are not distributed with the Software are subjected to their own respective licenses.
+
+3 TITLE. 
+
+3.1 The Licensor retains all right, title, and interest in and to the Software and the Software License Key and in all related copyrights, trade secrets, patents, trademarks, and any other intellectual and industrial property and proprietary rights, including registrations, applications, renewals, and extensions of such rights.
+
+4 SUPPORT AND SUBSCRIPTION SERVICES NOT INCLUDED
+
+4.1 The Licensor will not provide any support services under this EULA. This EULA does not give you any rights to any updates or upgrades to the Software or to any extensions or enhancements to the Software developed by the Licensor at any time in the future. The Licensor may offer support and subscription services separately. If you have purchased the Licensor's support and subscription services with the Software, these services are provided to you under the Support Contract Terms and Conditions posted on the Licensor's Web site and by accepting the terms of this EULA you are accepting these Support Contract Terms and Conditions. Any supplemental software code or related materials that the Licensor provides to you as part of any support and subscription services are to be considered part of the Software and are subject to the terms and conditions of this EULA. The Licensor may use any technical information you provide for any business purposes without restriction, including for product support and development. 
+
+5 TERMINATION
+
+5.1 Termination. The Licensor may terminate this EULA immediately and without notice if you fail to comply with any term of this EULA.
+
+5.2 Effect of Termination. In the event of termination, you must destroy all copies of the Software and Software License Key. In addition you must remove all copies of the Software, including all backup copies, from the Server and all computers and terminals on which it is installed. From time to time, the Licensor may change the terms of this EULA. The Licensor will post the updated EULA on the website. Your continued use of the Software will indicate your agreement to the change.
+
+6 LIMITED WARRANTY AND LIMITATION OF LIABILITY
+
+6.1 Limited Warranty. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR PROVIDES THE SOFTWARE WITHOUT ANY WARRANTIES OF ANY KIND, EXPRESS, IMPLIED, STATUTORY, OR IN ANY OTHER PROVISION OF THIS EULA OR COMMUNICATION WITH YOU, AND THE LICENSOR SPECIFICALLY DISCLAIMS ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON- INFRINGEMENT.
+
+6.2 Limitation of Liability. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL THE LICENSOR BE LIABLE FOR ANY LOST PROFITS OR BUSINESS OPPORTUNITIES, LOSS OF USE, BUSINESS INTERRUPTION, LOSS OF DATA, OR ANY OTHER INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES UNDER ANY THEORY OF LIABILITY, WHETHER BASED IN CONTRACT, TORT, NEGLIGENCE, PRODUCT LIABILITY, OR OTHERWISE. BECAUSE SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, THE PRECEDING LIMITATION MAY NOT APPLY TO YOU. THE LICENSOR'S LIABILITY UNDER THIS EULA WILL NOT, IN ANY EVENT, EXCEED THE LICENSE FEES, IF ANY, PAID BY YOU FOR THE SOFTWARE LICENSED TO YOU UNDER THIS EULA. THE FOREGOING LIMITATIONS SHALL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, REGARDLESS OF WHETHER THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF WHETHER ANY REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
+
+7 EXPORT RESTRICTIONS
+
+7.1 THIS END-USER LICENSE AGREEMENT IS EXPRESSLY MADE SUBJECT TO ANY LAWS, REGULATIONS, ORDERS, OR OTHER RESTRICTIONS ON THE EXPORT OF THE SOFTWARE FROM THE UNITED STATES OF AMERICA AND/OR INFORMATION ABOUT SUCH SOFTWARE THAT MAY BE IMPOSED FROM TIME TO TIME BY THE GOVERNMENT OF THE UNITED STATES OF AMERICA. You agree to comply with all national and international laws that apply to the Software, including, but not limited to, the United States Export Administration Regulations, as well as end-user, end-use, and destination restrictions issued by the United States and other governments. You shall not use or otherwise export or re-export the Software except as authorized by United States laws, regulations, and orders and the laws of the jurisdictions in which the Software was obtained. In particular, but without limitation, the Software may not be exported or re-exported: a) into (or to a national or resident of) any U.S. embargoed countries or b) in violation of any U.S. Department of Commerce Export Administration Regulations. By using the Software, you represent and warrant that you are not located in, under control of, or a national or resident of any such country or otherwise prohibited from lawfully using the Software.
+
+8 GENERAL
+
+8.1 Entire Agreement. This Agreement sets forth the Licensor's entire liability and your exclusive remedy with respect to the Software and supersedes the terms of any purchase orders and any other communications or advertising with respect to the Software. You acknowledge that this Agreement is a complete statement of the agreement between you and the Licensor with respect to the Software, and that there are no other prior or contemporaneous understandings, promises, representations, or descriptions with respect to the Software.
+
+8.2 Headings. Headings under this EULA are intended only for convenience and shall not affect the interpretation of this EULA.
+
+8.3 Waiver and Modification. No failure of either party to exercise or enforce any of its rights under this EULA will act as a waiver of those rights. This EULA may only be modified, or any rights under it waived, by a written document executed by the party against which it is asserted.
+
+8.4 Severability. If any provision of this EULA is found illegal or unenforceable, it will be enforced to the maximum extent permissible, and the legality and enforceability of the other provisions of this EULA will not be affected.
+
+8.5 Governing Law. This EULA will be governed by the laws of the State of California, United States of America, without regard to its choice of law principles. The United Nations Convention for the International Sale of Goods shall not apply.

@@ -1,0 +1,452 @@
+[{
+    title : '@@userview.crudmenu.editCrud@@',
+    properties : [{
+        name : 'id',
+        label : 'ID',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.crudmenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.crudmenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.crudmenu.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : 'List'
+    },
+    {
+        name : 'datalistId',
+        label : '@@userview.crudmenu.listId@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/datalist/options'
+    },
+    {
+        name : 'addFormId',
+        label : '@@userview.crudmenu.formId.add@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'editFormId',
+        label : '@@userview.crudmenu.formId.edit@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    }]
+},
+{
+    title : '@@userview.crudmenu.ui.list@@',
+    properties : [{
+        name : 'rowCount',
+        label : '@@userview.crudmenu.rowCount@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'buttonPosition',
+        label : '@@userview.crudmenu.buttonPosition@@',
+        type : 'selectbox',
+        value : 'bottomLeft',
+        options : [{
+            value : 'topLeft',
+            label : '@@userview.crudmenu.buttonPosition.topLeft@@'
+        },
+        {
+            value : 'topRight',
+            label : '@@userview.crudmenu.buttonPosition.topRight@@'
+        },
+        {
+            value : 'bottomLeft',
+            label : '@@userview.crudmenu.buttonPosition.bottomLeft@@'
+        },
+        {
+            value : 'bottomRight',
+            label : '@@userview.crudmenu.buttonPosition.bottomRight@@'
+        },
+        {
+            value : 'bothLeft',
+            label : '@@userview.crudmenu.buttonPosition.bothLeft@@'
+        },
+        {
+            value : 'bothRight',
+            label : '@@userview.crudmenu.buttonPosition.bothRight@@'
+        }]
+    },
+    {
+        name : 'selectionType',
+        label : '@@userview.crudmenu.selectionType@@',
+        type : 'selectbox',
+        value : 'multiple',
+        options : [{
+            value : 'multiple',
+            label : '@@userview.crudmenu.selectionType.multiple@@'
+        },{
+            value : 'single',
+            label : '@@userview.crudmenu.selectionType.single@@'
+        }]
+    },
+    {
+        name : 'checkboxPosition',
+        label : '@@userview.crudmenu.checkboxPosition@@',
+        type : 'selectbox',
+        value : 'left',
+        options : [{
+            value : 'left',
+            label : '@@userview.crudmenu.checkboxPosition.left@@'
+        },
+        {
+            value : 'right',
+            label : '@@userview.crudmenu.checkboxPosition.right@@'
+        },
+        {
+            value : 'both',
+            label : '@@userview.crudmenu.checkboxPosition.both@@'
+        },
+        {
+            value : 'no',
+            label : '@@userview.crudmenu.checkboxPosition.no@@'
+        }]
+    },
+    {
+        name : 'list-editLinkLabel',
+        label : '@@userview.crudmenu.editLinkLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'list-newButtonLabel',
+        label : '@@userview.crudmenu.newRecordButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'list-deleteButtonLabel',
+        label : '@@userview.crudmenu.deleteButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'list-showDeleteButton',
+        label : '@@userview.crudmenu.showDeleteButton@@',
+        type : 'checkbox',
+        options : [{
+            value : 'yes',
+            label : ''
+        }]
+    },
+    {
+        name:'list-deleteGridData',
+        label:'@@datalist.formrowdeletedatalistaction.deleteGridData@@',
+        type:'checkbox',
+        value:'false',
+        options:[
+            {
+                value:'true',
+                label:''
+            }
+        ],
+        control_field: 'list-showDeleteButton',
+        control_value: 'yes',
+        control_use_regex: 'false',
+    },
+    {
+        name:'list-deleteSubformData',
+        label:'@@datalist.formrowdeletedatalistaction.deleteChildFormData@@',
+        type:'checkbox',
+        value:'false',
+        options:[
+            {
+                value:'true',
+                label:''
+            }
+        ],
+        control_field: 'list-showDeleteButton',
+        control_value: 'yes',
+        control_use_regex: 'false',
+    },
+    {
+        name:'list-abortRelatedRunningProcesses',
+        label:'@@datalist.formrowdeletedatalistaction.abortRelatedRunningProcesses@@',
+        type:'checkbox',
+        value:'false',
+        options:[
+            {
+                value:'true',
+                label:''
+            }
+        ],
+        control_field: 'list-showDeleteButton',
+        control_value: 'yes',
+        control_use_regex: 'false',
+    },
+    {
+        name : 'list-customHeader',
+        label : '@@userview.crudmenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'list-customFooter',
+        label : '@@userview.crudmenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }]
+},
+{
+    title : '@@userview.crudmenu.actions.list@@',
+    properties : [{
+        name : 'list-moreActions',
+        label : '@@userview.crudmenu.moreActions@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@userview.crudmenu.label@@'
+        },
+        {
+            key : 'href',
+            label : '@@userview.crudmenu.hyperlink@@'
+        },
+        {
+            key : 'hrefParam',
+            label : '@@userview.crudmenu.parameterName@@'
+        },
+        {
+            key : 'hrefColumn',
+            label : '@@userview.crudmenu.columnName@@'
+        },
+        {
+            key : 'confirmation',
+            label : '@@userview.crudmenu.confirmationMessage@@'
+        }]
+    }]
+},
+{
+    title : '@@userview.crudmenu.ui.add@@',
+    properties : [{
+        name : 'add-cancelButtonLabel',
+        label : '@@userview.crudmenu.cancelButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'add-saveButtonLabel',
+        label : '@@userview.crudmenu.saveButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'add-customHeader',
+        label : '@@userview.crudmenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'add-customFooter',
+        label : '@@userview.crudmenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }]
+},
+{
+    title : '@@userview.crudmenu.actions.add@@',
+    properties : [{
+        name : 'add-messageShowAfterComplete',
+        label : '@@userview.crudmenu.messageShownAfterSaved@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '3'
+    },
+    {
+        name : 'add-afterSaved',
+        label : '@@userview.crudmenu.actionAfterSaved@@',
+        type : 'selectbox',
+        required : 'True',
+        options : [{
+            value : 'list',
+            label : '@@userview.crudmenu.returnToList@@'
+        },
+        {
+            value : 'add',
+            label : '@@userview.crudmenu.continueOnAdding@@'
+        },
+        {
+            value : 'edit',
+            label : '@@userview.crudmenu.displayInEdit@@'
+        },
+        {
+            value : 'redirect',
+            label : '@@userview.crudmenu.redirection@@'
+        }]
+    },
+    {
+        name : 'add-afterSavedRedirectUrl',
+        label : '@@userview.crudmenu.aftersaved.redirect.hyperlink@@',
+        type : 'textfield'
+    },
+    {
+        name : 'add-afterSavedRedirectParamName',
+        label : '@@userview.crudmenu.aftersaved.redirect.parameterName@@',
+        type : 'textfield'
+    },
+    {
+        name : 'add-afterSavedRedirectParamvalue',
+        label : '@@userview.crudmenu.aftersaved.redirect.fieldName@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@userview.crudmenu.ui.edit@@',
+    properties : [{
+        name : 'edit-readonly',
+        label : '@@userview.crudmenu.readonly@@',
+        type : 'checkbox',
+        options : [{
+            value : 'yes',
+            label : ''
+        }]
+    },
+    {
+        name : 'edit-readonlyLabel',
+        label : '@@userview.crudmenu.readonlyLabel@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'edit-backButtonLabel',
+        label : '@@userview.crudmenu.backButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-saveButtonLabel',
+        label : '@@userview.crudmenu.saveButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-allowRecordTraveling',
+        label : '@@userview.crudmenu.allowRecordTraveling@@',
+        type : 'checkbox',
+        options : [{
+            value : 'yes',
+            label : ''
+        }]
+    },
+    {
+        name : 'edit-firstButtonLabel',
+        label : '@@userview.crudmenu.firstRecordButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-prevButtonLabel',
+        label : '@@userview.crudmenu.prevRecordButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-nextButtonLabel',
+        label : '@@userview.crudmenu.nextRecordButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-lastButtonLabel',
+        label : '@@userview.crudmenu.lastRecordButtonLabel@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-customHeader',
+        label : '@@userview.crudmenu.customHeader@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'edit-customFooter',
+        label : '@@userview.crudmenu.customFooter@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }]
+},
+{
+    title : '@@userview.crudmenu.actions.edit@@',
+    properties : [{
+        name : 'edit-messageShowAfterComplete',
+        label : '@@userview.crudmenu.messageShownAfterSaved@@',
+        type : 'textarea',
+        cols : '60',
+        rows : '3'
+    },
+    {
+        name : 'edit-afterSaved',
+        label : '@@userview.crudmenu.actionAfterSaved@@',
+        type : 'selectbox',
+        required : 'True',
+        options : [{
+            value : 'list',
+            label : '@@userview.crudmenu.returnToList@@'
+        },
+        {
+            value : 'continue',
+            label : '@@userview.crudmenu.continueOnEditRecord@@'
+        },
+        {
+            value : 'continueNext',
+            label : '@@userview.crudmenu.continueOnEditNextRecord@@'
+        },
+        {
+            value : 'redirect',
+            label : '@@userview.crudmenu.redirection@@'
+        }]
+    },
+    {
+        name : 'edit-afterSavedRedirectUrl',
+        label : '@@userview.crudmenu.aftersaved.redirect.hyperlink@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-afterSavedRedirectParamName',
+        label : '@@userview.crudmenu.aftersaved.redirect.parameterName@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-afterSavedRedirectParamvalue',
+        label : '@@userview.crudmenu.aftersaved.redirect.fieldName@@',
+        type : 'textfield'
+    },
+    {
+        name : 'edit-moreActions',
+        label : '@@userview.crudmenu.moreActions@@',
+        type : 'grid',
+        columns : [{
+            key : 'label',
+            label : '@@userview.crudmenu.label@@'
+        },
+        {
+            key : 'href',
+            label : '@@userview.crudmenu.hyperlink@@'
+        },
+        {
+            key : 'hrefParam',
+            label : '@@userview.crudmenu.parameterName@@'
+        },
+        {
+            key : 'hrefColumn',
+            label : '@@userview.crudmenu.fieldName@@'
+        },
+        {
+            key : 'confirmation',
+            label : '@@userview.crudmenu.confirmationMessage@@'
+        }]
+    }]
+},
+{
+    title : '@@userview.crudmenu.advanced@@',
+    properties : [{
+        name : 'keyName',
+        label : '@@userview.crudmenu.userviewKeyName@@',
+        type : 'textfield'
+    }]
+}]

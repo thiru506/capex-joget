@@ -1,0 +1,48 @@
+07-Feb-2018 17:07:37.885 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.20
+07-Feb-2018 17:07:37.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Feb 15 2015 18:10:42 UTC
+07-Feb-2018 17:07:37.886 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.20.0
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.4.0-62-generic
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          i386
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-8-openjdk-i386/jre
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Feb-2018 17:07:37.887 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /opt/joget/apache-tomcat-8.0.20
+07-Feb-2018 17:07:37.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /opt/joget/apache-tomcat-8.0.20
+07-Feb-2018 17:07:37.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/opt/joget/apache-tomcat/conf/logging.properties
+07-Feb-2018 17:07:37.888 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Feb-2018 17:07:37.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:MaxPermSize=128m
+07-Feb-2018 17:07:37.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx512M
+07-Feb-2018 17:07:37.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dwflow.home=/opt/joget/wflow/
+07-Feb-2018 17:07:37.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -javaagent:/opt/joget/wflow/aspectjweaver-1.8.5.jar
+07-Feb-2018 17:07:37.889 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/opt/joget/apache-tomcat/endorsed
+07-Feb-2018 17:07:37.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/opt/joget/apache-tomcat
+07-Feb-2018 17:07:37.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/opt/joget/apache-tomcat
+07-Feb-2018 17:07:37.890 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/opt/joget/apache-tomcat/temp
+07-Feb-2018 17:07:37.891 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/i386:/usr/lib/i386-linux-gnu/jni:/lib/i386-linux-gnu:/usr/lib/i386-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+07-Feb-2018 17:07:38.021 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Feb-2018 17:07:38.047 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Feb-2018 17:07:38.050 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+07-Feb-2018 17:07:38.051 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Feb-2018 17:07:38.052 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 916 ms
+07-Feb-2018 17:07:38.082 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+07-Feb-2018 17:07:38.082 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.20
+07-Feb-2018 17:07:38.125 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /opt/joget/apache-tomcat-8.0.20/webapps/jw.war
+07-Feb-2018 11:38:07.304 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /opt/joget/apache-tomcat-8.0.20/webapps/jw.war has finished in -19,770,823 ms
+07-Feb-2018 11:38:07.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /opt/joget/apache-tomcat-8.0.20/webapps/jwdesigner.war
+07-Feb-2018 11:38:07.998 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /opt/joget/apache-tomcat-8.0.20/webapps/jwdesigner.war has finished in 693 ms
+07-Feb-2018 11:38:07.999 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/joget/apache-tomcat-8.0.20/webapps/ROOT
+07-Feb-2018 11:38:08.023 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/joget/apache-tomcat-8.0.20/webapps/ROOT has finished in 24 ms
+07-Feb-2018 11:38:08.025 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/joget/apache-tomcat-8.0.20/webapps/docs
+07-Feb-2018 11:38:08.043 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/joget/apache-tomcat-8.0.20/webapps/docs has finished in 18 ms
+07-Feb-2018 11:38:08.044 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/joget/apache-tomcat-8.0.20/webapps/examples
+07-Feb-2018 11:38:08.261 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/joget/apache-tomcat-8.0.20/webapps/examples has finished in 217 ms
+07-Feb-2018 11:38:08.261 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/joget/apache-tomcat-8.0.20/webapps/host-manager
+07-Feb-2018 11:38:08.284 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/joget/apache-tomcat-8.0.20/webapps/host-manager has finished in 22 ms
+07-Feb-2018 11:38:08.284 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /opt/joget/apache-tomcat-8.0.20/webapps/manager
+07-Feb-2018 11:38:08.305 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /opt/joget/apache-tomcat-8.0.20/webapps/manager has finished in 21 ms
+07-Feb-2018 11:38:08.311 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+07-Feb-2018 11:38:08.318 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+07-Feb-2018 11:38:08.318 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 29047 ms
+07-Feb-2018 12:02:48.905 INFO [http-nio-8080-exec-6] org.apache.tomcat.util.http.Parameters.processParameters Invalid chunk starting at byte [75] and ending at byte [76] with a value of [=] ignored
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.

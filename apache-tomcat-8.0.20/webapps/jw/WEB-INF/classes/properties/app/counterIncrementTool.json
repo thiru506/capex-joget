@@ -1,0 +1,50 @@
+[{
+    title : '@@app.counterincrementtool.config@@',
+    properties : [{
+        name : 'type',
+        label : '@@app.counterincrementtool.type@@',
+        type : 'selectbox',
+        required : 'True',
+        value : 'workflowVariable',
+        options : [{
+            value : "workflowVariable",
+            label : "@@app.counterincrementtool.type.workflowVariable@@"
+        },
+        {
+            value : "envVariable",
+            label : "@@app.counterincrementtool.type.envVariable@@"
+        }]
+    },
+    {
+        name : 'variableName',
+        label : '@@app.counterincrementtool.variableName@@',
+        type : 'textfield',
+        required : 'True',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@app.counterincrementtool.invalidVariableName@@'
+    },
+    {
+        name : 'initValue',
+        label : '@@app.counterincrementtool.initValue@@',
+        type : 'textfield',
+        required : 'True',
+        regex_validation : '^[0-9]+$',
+        validation_message : '@@app.counterincrementtool.invalidInitValue@@'
+    },
+    {
+        name : 'incrementValue',
+        label : '@@app.counterincrementtool.incrementValue@@',
+        type : 'textfield',
+        value : '1',
+        required : 'True',
+        regex_validation : '^[0-9]+$',
+        validation_message : '@@app.counterincrementtool.invalidIncrementValue@@'
+    },
+    {
+        name : 'resetValue',
+        label : '@@app.counterincrementtool.resetValue@@',
+        type : 'textfield',
+        regex_validation : '^[0-9]+$',
+        validation_message : '@@app.counterincrementtool.invalidResetValue@@'
+    }]
+}]

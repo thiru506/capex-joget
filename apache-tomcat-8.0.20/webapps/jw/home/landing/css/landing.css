@@ -1,0 +1,195 @@
+a {
+    color: #006faf;
+}
+#landing {
+    width: 640px;
+    color: #535353;
+    min-height: 700px;
+}
+#landing-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+#landing-splash {
+    margin-top: 20px;
+    background: url(../images/splash.jpg);
+    background-size: 100%;
+    width: 640px;
+    height: 300px;
+}
+#landing-splash-title {
+    position: relative;
+    float: left;
+    top: 50px;
+    left: 50px;
+    width: 250px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+#landing-splash-subtitle {
+    position: relative;
+    float: left;
+    clear: left;
+    top: 60px;
+    left: 50px;
+    font-size: 16px;
+    color: #9E9E9E;
+    width: 250px;
+}
+#landing-banner {
+    margin-top: 20px;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    font-family: serif;
+    font-size: 24px;
+    text-align: center;
+    color: #696969;
+}
+#landing-table {
+    margin-top: 20px;
+}
+.landing-column {
+    width: 50%;
+    float: left;
+    padding-bottom: 20px;
+}
+.landing-column ul {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.landing-column-bg {
+    border: 1px solid #E5E5E5;
+    background-color: whiteSmoke;                                    
+    margin-right: 10px;
+    padding-bottom: 20px;
+    min-height: 165px;
+}
+.landing-column h2 {
+    padding: 10px 15px 10px 10px;
+    margin: 0px 30px 10px 0px;
+    width: 92%;
+    height: auto;
+    background: url(../images/title_bg.jpg) whiteSmoke;
+    background-size: 100%;
+    text-transform: uppercase;
+}
+.landing-li-title {
+    text-decoration: underline;
+    display: block;
+    color: #006faf;
+}
+.landing-li-description {
+    text-decoration: none;
+    font-size: 9px;
+}
+#landing-col-image {
+    display: none;
+    background: url(../images/title_bg.jpg) whiteSmoke;
+    background-size: 100%;
+    width: 100%;
+    height: 50px;
+    border: solid 1px gray;
+    opacity: 0.5;
+}
+#landing #my-inbox {
+    border: dotted 1px silver;
+    width: 96%;
+    margin: 5px 0px;
+    padding: 0px 0px 10px 0px;
+    min-height: 265px;
+}
+#landing #inbox1 {
+    padding-left: 5px;
+}
+#landing .portlet_div_search {
+    width: 96%;
+    height: 40px;
+}
+#landing .portlet_div_sorting {
+    float: right;
+    width: auto;
+}
+#landing .portlet_div_paging {
+    text-align: right;
+    float: right;
+    width: auto;
+    clear: both;
+}
+#landing .portlet_table_list {
+    height: 80%;
+    margin-top: 28px;
+    width: 96%;
+    clear: both;
+}
+#landing .portlet_label, #landing .portlet_input, #landing .portlet_div_search .button, #landing .portlet_div_paging .button {
+    font-size: 11px;
+}
+#landing .portlet_table_data {
+    width: 100%;
+    border-top: solid 1px silver;
+    padding-bottom: 15px;
+}
+#landing .portlet_table_date_created {
+    font-size: 12px;
+    float: right;
+}
+#landing .portlet_table_process {
+    font-size: 8pt;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    padding-left: 22px;
+}
+
+#slides { 
+    position: relative;
+    left: -10px;
+    width: 639px; 
+    background: #d0d0d0; 
+    -moz-border-radius: 6px; 
+    -webkit-border-radius: 6px; 
+    border-radius: 6px; 
+    padding: 10px 10px 15px 10px;
+    margin-top: 10px;
+} 
+.slides_container { 
+    width: 639px; 
+    overflow: hidden; 
+    position: relative; 
+    display: none; 
+}
+.slides_container a { 
+    width: 639px; 
+    height: 296px; 
+    display: block; 
+}
+.slides_container a img { 
+    display: block; 
+}
+.pagination { 
+    margin: 5px 0 0 260px; 
+    width: auto; 
+    position: relative; 
+    z-index: 2  
+}
+.pagination li { 
+    float: left; 
+    margin: 0; 
+    list-style: none; 
+}
+.pagination li a { 
+    display: block; 
+    width: 18px; 
+    height: 1px; 
+    padding-top: 15px; 
+    background:url(../images/pagination.png) 0 0 no-repeat; 
+    float: right; 
+    overflow: hidden;
+}
+.pagination li.current a { 
+    background-position: 0 -20px; 
+}
+

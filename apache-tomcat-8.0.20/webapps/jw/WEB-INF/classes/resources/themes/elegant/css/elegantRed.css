@@ -1,0 +1,11 @@
+#header .navbar-fixed-top .navbar-inner, #header .navbar-fixed-bottom .navbar-inner {
+    background: #C00A00;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+    background: #C00A00;
+}
+.navbar-inverse .brand:hover, .navbar-inverse .nav>li>a:hover {
+    color: whitesmoke;
+}

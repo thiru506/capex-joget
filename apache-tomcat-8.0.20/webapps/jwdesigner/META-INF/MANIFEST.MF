@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: ubuntu
+Build-Jdk: 1.8.0_45
+Extension-Name: wflow-enterprise-designerweb
+Implementation-Title: wflow-enterprise-designerweb
+Implementation-Version: 5.0.13
+

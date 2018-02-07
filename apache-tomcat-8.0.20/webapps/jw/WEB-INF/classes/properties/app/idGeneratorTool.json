@@ -1,0 +1,43 @@
+[{
+    title : '@@app.idgeneratortool.config@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.idgeneratortool.form@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app[APP_PATH]/forms/options',
+        required : 'true'
+    },
+    {
+        name : 'fieldId',
+        label : '@@app.idgeneratortool.fieldId@@',
+        type : 'textfield'
+    },
+    {
+        name : 'recordId',
+        label : '@@app.idgeneratortool.recordId@@',
+        type : 'textfield'
+    },
+    {
+        name : 'envVariable',
+        description : '@@app.idgeneratortool.envVariableDesc@@',
+        label : '@@app.idgeneratortool.envVariableName@@',
+        type : 'textfield',
+        required : 'true',
+        value : 'counter'
+    },
+    {
+        name : 'format',
+        label : '@@app.idgeneratortool.format@@',
+        type : 'textfield',
+        required : 'true',
+        value : 'ID-??????'
+    }]
+},
+{
+    title : '@@app.idgeneratortool.workflowVariables@@',
+    properties : [{
+        name : 'workflowVariable',
+        label : '@@app.idgeneratortool.workflowVariable@@',
+        type : 'textfield'
+    }]
+}]

@@ -1,0 +1,125 @@
+[{
+    title : '@@userview.datalistinboxmenu.editInbox@@',
+    properties : [{
+        name : 'id',
+        label : 'ID',
+        type : 'hidden'
+    },
+    {
+        name : 'customId',
+        label : '@@userview.datalistinboxmenu.customId@@',
+        type : 'textfield',
+        regex_validation : '^[a-zA-Z0-9_]+$',
+        validation_message : '@@userview.datalistinboxmenu.invalidId@@'
+    },
+    {
+        name : 'label',
+        label : '@@userview.datalistinboxmenu.label@@',
+        type : 'textfield',
+        required : 'True',
+        value : 'List'
+    },
+    {
+        name : 'datalistId',
+        label : '@@userview.datalistinboxmenu.datalist@@',
+        type : 'selectbox',
+        required : 'True',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/datalist/options'
+    },
+    {
+        name : '%s',
+        label : '@@userview.datalistinboxmenu.assignmentToDisplay@@',
+        type : 'selectbox',
+        options : [{
+            value : '%s',
+            label : '@@userview.datalistinboxmenu.allAssignments@@'
+        },
+        {
+            value : '%s',
+            label : '@@userview.datalistinboxmenu.assignmentForAllApp@@'
+        },
+        {
+            value : '%s',
+            label : '@@userview.datalistinboxmenu.assignmentForAProcessOnly@@'
+        },
+        {
+            value : '%s',
+            label : '@@userview.datalistinboxmenu.assignmentForSelectedActivityOnly@@'
+        }]
+    },
+    {
+        name : 'processId',
+        label : '@@userview.datalistinboxmenu.process@@',
+        type : 'selectbox',
+        control_field: 'appFilter',
+        control_value: '^(process|activity)$',
+        control_use_regex: 'true',
+        required : 'true',
+        options_ajax : '[CONTEXT_PATH]/web/json/app/%s/%s/plugin/org.joget.plugin.enterprise.DataListInboxMenu/service?action=getProcesses'
+    },
+    {
+        name : 'activityDefId',
+        label : '@@userview.datalistinboxmenu.activity@@',
+        type : 'multiselect',
+        size : '10',
+        control_field: 'appFilter',
+        control_value: 'activity',
+        control_use_regex: 'false',
+        required : 'true',
+        options_ajax_on_change : 'processId',
+        options_ajax : '[CONTEXT_PATH]/web/json/app/%s/%s/plugin/org.joget.plugin.enterprise.DataListInboxMenu/service?action=getActivities'
+    }]
+},
+{
+    title : '@@userview.datalistinboxmenu.ui.list@@',
+    properties : [{
+        name : 'rowCount',
+        label : '@@userview.datalistinboxmenu.rowCount@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },{
+        name : 'showDetail',
+        label : '@@userview.datalistinboxmenu.showDetail@@',
+        type : 'checkbox',
+        value : 'false',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    },
+    {
+        name : 'list-customHeader',
+        label : '@@userview.datalistinboxmenu.customHeader.list@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'list-customFooter',
+        label : '@@userview.datalistinboxmenu.customFooter.list@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },{
+        name : 'assignment-customHeader',
+        label : '@@userview.datalistinboxmenu.customHeader.ass@@',
+        type : 'codeeditor',
+        mode : 'html'
+    },
+    {
+        name : 'assignment-customFooter',
+        label : '@@userview.datalistinboxmenu.customFooter.ass@@',
+        type : 'codeeditor',
+        mode : 'html'
+    }]
+},
+{
+    title : '@@userview.datalistmenu.advanced@@',
+    properties : [{
+        name : 'keyName',
+        label : '@@userview.datalistmenu.userviewKeyName@@',
+        type : 'textfield'
+    }]
+}]

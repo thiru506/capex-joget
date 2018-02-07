@@ -1,0 +1,235 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font: 13px/20px Arial,Helvetica,sans-serif;
+    line-height: 1;
+    background:#1e303e url(bg_blue.jpg) 0 0 repeat-x;
+}
+
+body.embeded {
+    background:#fff none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*layout*/
+#page {
+    border-left:0;
+    border-right:0;
+    width:1000px; 
+    margin:auto;
+}
+
+#header {
+    min-height:93px;
+    background:url(header_background.jpg) 0 0 repeat-x #f6f6f6;
+}
+
+#header-info{
+    margin:0 15px 5px;
+}
+
+#header-name a#header-link{
+    font-size:25px;
+    font-family: Monaco, monospace;
+    font-weight: normal;
+    text-decoration:none;
+    color:#445777;
+}
+
+#header-name span {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+#header-description #description{
+    padding-top:10px;
+    font-size:14px;
+    font-family: Monaco, monospace;
+    color:#7e7e7e;
+}
+
+#header-message{
+    color:#7e7e7e;
+    margin:0px;
+    padding:0px 50px 5px;
+}
+
+#header-message a{
+    color:#7e7e7e;
+    text-decoartion:none;
+}
+
+body.embeded #menu{
+    display:none;
+}
+
+body#home.embeded #slider{
+    display:none;
+}
+
+#menu{
+    height:45px;
+    background:url(menu_background.jpg) 0 0 repeat-x;
+    border: 1px solid #FFFFFF;
+}
+
+#main{ 
+    background-color:#ffffff;
+    overflow:hidden;
+}
+
+#header, #main, #footer{
+    border-bottom:0;
+}
+
+#footer{
+    height:45px;
+    background:url(menu_background.jpg) 0 0 repeat-x;
+    border: 1px solid #FFFFFF;
+    clear:both;
+    text-align:center;
+    color:#FFFFFF;
+    font: 12px Arial, Helvetica, sans-serif;
+    border-bottom:0;
+}
+
+#footer p {
+    line-height:45px;
+}	
+
+#menu ul {
+    text-align:center;
+}	
+
+#menu ul li{
+    display:inline; padding:0 15px;
+}	
+
+#menu ul li a {	
+    font: normal normal 17px Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    color:#FFFFFF;
+    line-height:45px;
+    text-align:center;
+    font-weight:500;
+    text-shadow:#333333 2px 2px 1px;
+}
+
+#menu ul li a:hover {
+    color:#000000; 
+    text-shadow:#ffffff 1px 1px 1px;
+}	
+
+#slider{
+    display:none;
+}
+
+#home #slider {
+    padding:10px; 
+    text-align:center;
+    display:block;
+}
+
+#page-title {
+    padding:30px; 
+    text-align:center; 
+    background-color:#e3eff1
+}
+
+#home #page-title {
+    display:none;
+}
+
+#navigation {
+    border-right:0;
+    width:260px; 
+    float:left; 
+    padding:5px;
+}
+
+#category-container {
+    background-color:#f7f7f7; 
+    padding:5px; 
+    margin-left:10px;
+}
+
+.category .category-label a{
+    font:bold 14px Arial, Helvetica, sans-serif; 
+    color:#0096cc; 
+    background-color:#dce7eb; 
+    padding:5px; 
+    margin-top:10px;
+    text-decoration:none;
+    display:block;
+}
+
+.menu-container .menu a {
+    font:13px/20px Arial, Helvetica, sans-serif; 
+    color:#727272; 
+    text-decoration:none; 
+    padding-left:20px;
+    text-decoration:none;
+}
+
+.menu-container .menu a:hover {
+    color:#0086b8
+}
+
+#content {
+    padding:5px; 
+    width:719px; 
+    float:left;
+}
+
+#page-title span {
+    font:36px Arial, Helvetica, sans-serif;
+    text-shadow:#000000 1px 1px 2px;
+}
+				
+

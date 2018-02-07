@@ -1,0 +1,15 @@
+{
+    "formDefId": "%s_assp_action",
+    "fields": [{
+            "field": "id"
+        }, {
+            "field": "username"
+        }, {
+            "field": "action"
+        }, {
+            "field": "remarks"
+        }, {
+            "field": "fk"
+        }],
+    "data": "#date.yyyyMMddHHmmssSSS#,-,%s,%s,#form.%s.id#"
+}

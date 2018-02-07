@@ -1,0 +1,102 @@
+[{
+    title : '@@app.soaptool.config@@',
+    properties : [{
+        name : 'wsdlUrl',
+        label : '@@app.soaptool.wsdlUrl@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'operationName',
+        label : '@@app.soaptool.operationName@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'username',
+        label : '@@app.soaptool.username@@',
+        type : 'textfield'
+    },
+    {
+        name : 'password',
+        label : '@@app.soaptool.password@@',
+        type : 'password'
+    },
+    {
+        name : 'params',
+        label : '@@app.soaptool.params@@',
+        type : 'grid',
+        columns : [{
+            key : 'value',
+            label : '@@app.soaptool.param@@'
+        }]
+    },
+    {
+        name : 'xml',
+        label : '@@app.soaptool.xml@@',
+        type : 'codeeditor',
+        mode : 'xml',
+        description : '@@app.soaptool.xml.desc@@'
+    },
+    {
+        name : 'soapAction',
+        label : '@@app.soaptool.soapAction@@',
+        type : 'textfield',
+        description : '@@app.soaptool.soapAction.desc@@'
+    }]
+},
+{
+    title : '@@app.soaptool.storeToForm@@',
+    properties : [{
+        name : 'formDefId',
+        label : '@@app.soaptool.formId@@',
+        type : 'selectbox',
+        options_ajax : '[CONTEXT_PATH]/web/json/console/app/%s/%s/forms/options'
+    },
+    {
+        name : 'multirowBaseObject',
+        label : '@@app.soaptool.baseObject@@',
+        type : 'textfield'
+    },
+    {
+        name : 'fieldMapping',
+        label : '@@app.soaptool.fieldMapping@@',
+        type : 'grid',
+        columns : [{
+            key : 'field',
+            label : '@@app.soaptool.fieldName@@'
+        },
+        {
+            key : 'jsonObjectName',
+            label : '@@app.soaptool.objectName@@'
+        }]
+    }]
+},
+{
+    title : '@@app.soaptool.storeToWorkflowVariable@@',
+    properties : [{
+        name : 'wfVariableMapping',
+        label : '@@app.soaptool.workflowVariableMapping@@',
+        type : 'grid',
+        columns : [{
+            key : 'variable',
+            label : '@@app.soaptool.workflowVariable@@'
+        },
+        {
+            key : 'jsonObjectName',
+            label : '@@app.soaptool.objectName@@'
+        }]
+    }]
+},
+{
+    title : '@@app.soaptool.Advanced@@',
+    properties : [{
+        name : 'debug',
+        label : '@@app.soaptool.debug@@',
+        type : 'checkbox',
+        options : [{
+            value : 'true',
+            label : ''
+        }]
+    }]
+}]

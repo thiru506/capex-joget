@@ -1,0 +1,27 @@
+.selector_element {
+    display: block;
+    margin-left: 30%;
+}
+.selector_items {
+    display: block;
+    margin: 5px 0px;
+}
+.selector_item {
+    margin-right: 5px;
+    border: dotted 1px silver;
+    padding: 2px;
+    display: block;
+    float: left;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px;
+}
+.selector_remove {
+    background: red;
+    padding: 2px 5px;
+    margin: 2px;
+    line-height: 2px;
+    font-size: 9px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}

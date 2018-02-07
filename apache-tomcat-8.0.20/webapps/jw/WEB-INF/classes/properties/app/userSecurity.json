@@ -1,0 +1,366 @@
+{
+    title : '@@app.edm.label.generalSetting@@',
+    properties : [
+        {
+            name : 'showLoginInfo',
+            label : '@@app.edm.label.showLoginInfo@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'failedLoginAttempt',
+            label : '@@app.edm.label.failedLoginAttempt@@',
+            type : 'selectbox',
+            value : '3',
+            options : [
+                { value : '', label : '' },
+                { value : '3', label : '3'},
+                { value : '4', label : '4'},
+                { value : '5', label : '5'},
+                { value : '6', label : '6'},
+                { value : '7', label : '7'},
+                { value : '8', label : '8'},
+                { value : '9', label : '9'},
+                { value : '10', label : '10'}
+            ]
+        },
+        {
+            name : 'lockoutPeriod',
+            label : '@@app.edm.label.lockoutPeriod@@',
+            type : 'selectbox',
+            value : '20',
+            options : [
+                { value : '', label : '' },
+                { value : '10', label : '10'},
+                { value : '20', label : '20'},
+                { value : '30', label : '30'},
+                { value : '40', label : '40'},
+                { value : '50', label : '50'},
+                { value : '60', label : '60'}
+            ]
+        },
+        {
+            name : 'allowSessionTimeout',
+            label : '@@app.edm.label.allowSessionTimeout@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'hardSessionTimeoutHours',
+            label : '@@app.edm.label.hardSessionTimeoutHours@@',
+            type : 'selectbox',
+            value : '8',
+            options : [
+                { value : '', label : '' },
+                { value : '8', label : '8'},
+                { value : '16', label : '16'},
+                { value : '24', label : '24'},
+                { value : '32', label : '32'},
+                { value : '40', label : '40'},
+                { value : '48', label : '48'}
+            ]
+        }
+    ]
+},
+{
+    title : '@@app.edm.label.defaultDirectoryPasswordPolicy@@',
+    properties : [
+        {
+            name : 'firstLoginPasswordChange',
+            label : '@@app.edm.label.firstLoginPasswordChange@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'generateRandomPassword',
+            label : '@@app.edm.label.generateRandomPassword@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'enableForgotPassword',
+            label : '@@app.edm.label.enableForgotPassword@@',
+            type : 'checkbox',
+            value : 'true',
+            options : [
+                {
+                    value : 'true',
+                    label : ''
+                }
+            ]
+        },
+        {
+            name : 'forgotPasswordLinkValidityPeriod',
+            label : '@@app.edm.label.forgotPasswordLinkValidityPeriod@@',
+            type : 'selectbox',
+            value : '15',
+            options : [
+                { value : '', label : '' },
+                { value : '15', label : '15'},
+                { value : '20', label : '20'},
+                { value : '25', label : '25'},
+                { value : '30', label : '30'}
+            ]
+        },
+        {
+            name : 'nPastPassword',
+            label : '@@app.edm.label.nPastPassword@@',
+            type : 'selectbox',
+            value : '5',
+            options : [
+                { value : '', label : '0' },
+                { value : '1', label : '1'},
+                { value : '2', label : '2'},
+                { value : '3', label : '3'},
+                { value : '4', label : '4'},
+                { value : '5', label : '5'},
+                { value : '6', label : '6'},
+                { value : '7', label : '7'},
+                { value : '8', label : '8'},
+                { value : '9', label : '9'},
+                { value : '10', label : '10'}
+            ]
+        },
+        {
+            name : 'passwordMinLength',
+            label : '@@app.edm.label.passwordMinLength@@',
+            type : 'selectbox',
+            value : '8',
+            options : [
+                { value : '', label : '' },
+                { value : '8', label : '8' },
+                { value : '9', label : '9'},
+                { value : '10', label : '10'},
+                { value : '11', label : '11'},
+                { value : '12', label : '12'},
+                { value : '13', label : '13'},
+                { value : '14', label : '14'},
+                { value : '15', label : '15'},
+                { value : '16', label : '16'},
+                { value : '17', label : '17'},
+                { value : '18', label : '18'},
+                { value : '19', label : '19'},
+                { value : '20', label : '20'},
+                { value : '21', label : '21'},
+                { value : '22', label : '22'},
+                { value : '23', label : '23'},
+                { value : '24', label : '24'},
+                { value : '25', label : '25'},
+                { value : '26', label : '26'},
+                { value : '27', label : '27'},
+                { value : '28', label : '28'},
+                { value : '29', label : '29'},
+                { value : '30', label : '30'},
+                { value : '31', label : '31'},
+                { value : '32', label : '32'}
+            ]
+        },
+        {
+            name : 'passwordPolicy',
+            label : '@@app.edm.label.passwordPolicy@@',
+            type : 'checkbox',
+            value : 'uppercase;lowercase;digit;specialChar;username',
+            options : [
+                {
+                    value : 'uppercase',
+                    label : '@@app.edm.label.policy.uppercase@@'
+                },
+                {
+                    value : 'lowercase',
+                    label : '@@app.edm.label.policy.lowercase@@'
+                },
+                {
+                    value : 'digit',
+                    label : '@@app.edm.label.policy.digit@@'
+                },
+                {
+                    value : 'specialChar',
+                    label : '@@app.edm.label.policy.specialChar@@'
+                },
+                {
+                    value : 'username',
+                    label : '@@app.edm.label.policy.username@@'
+                }
+            ]
+        },
+        {
+            name : 'passwordValidityPeriod',
+            label : '@@app.edm.label.passwordValidityPeriod@@',
+            type : 'selectbox',
+            value: '6',
+            options : [
+                { value : '', label : '' },
+                { value : '3', label : '3' },
+                { value : '6', label : '6'},
+                { value : '9', label : '9'},
+                { value : '12', label : '12'}
+            ]
+        },
+        {
+            name : 'passwordExpireNotification',
+            label : '@@app.edm.label.passwordExpireNotification@@',
+            type : 'selectbox',
+            value: '10',
+            options : [
+                { value : '', label : '' },
+                { value : '5', label : '5' },
+                { value : '10', label : '10'},
+                { value : '15', label : '15'},
+                { value : '20', label : '20'},
+                { value : '25', label : '25'},
+                { value : '30', label : '30'}
+            ]
+        }
+    ]
+},
+{
+    title : '@@app.edm.label.notification@@',
+    properties : [
+        {
+            name : 'host',
+            label : '@@app.emailtool.host@@',
+            type : 'textfield'
+        },
+        {
+            name : 'port',
+            label : '@@app.emailtool.port@@',
+            type : 'textfield'
+        },
+        {
+            name : 'security',
+            label : '@@app.emailtool.security@@',
+            type : 'selectbox',
+            options : [{
+                value : '',
+                label : ''
+            },
+            {
+                value : 'TLS',
+                label : '@@app.emailtool.security.tls@@'
+            },
+            {
+                value : 'SSL',
+                label : '@@app.emailtool.security.ssl@@'
+            }]
+        },
+        {
+            name : 'username',
+            label : '@@app.emailtool.username@@',
+            type : 'textfield'
+        },
+        {
+            name : 'password',
+            label : '@@app.emailtool.password@@',
+            type : 'password'
+        },
+        {
+            name : 'from',
+            label : '@@app.emailtool.from@@',
+            type : 'textfield',
+            regex_validation : '^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z-]{2,})$',
+            validation_message : '@@app.edm.message.invalidEmailFormat@@'
+        },
+        {
+            name : 'cc',
+            label : '@@app.emailtool.cc@@',
+            type : 'textfield'
+        },
+        {
+            name : 'isHtml',
+            label : '@@app.emailtool.isHtml@@',
+            type : 'checkbox',
+            value : 'false',
+            options : [{
+                value : 'true',
+                label : ''
+            }]
+        },
+        {
+            name : 'userCreationSubject',
+            label : '@@app.edm.label.userCreationSubject@@',
+            type : 'textfield',
+            value : '@@app.edm.message.userCreationSubject@@'
+        },
+        {
+            name : 'userCreationMessage',
+            label : '@@app.edm.label.userCreationMessage@@',
+            type : 'textarea',
+            cols : '60',
+            rows : '15',
+            value : '@@app.edm.message.userCreationMessage@@'
+        },
+        {
+            name : 'passwordResetSubject',
+            label : '@@app.edm.label.passwordResetSubject@@',
+            type : 'textfield',
+            value : '@@app.edm.message.passwordResetSubject@@'
+        },
+        {
+            name : 'passwordResetMessage',
+            label : '@@app.edm.label.passwordResetMessage@@',
+            type : 'textarea',
+            cols : '60',
+            rows : '15',
+            value : '@@app.edm.message.passwordResetMessage@@'
+        },
+        {
+            name : 'forgotPasswordSubject',
+            label : '@@app.edm.label.forgotPasswordSubject@@',
+            type : 'textfield',
+            value : '@@app.edm.message.forgotPasswordSubject@@'
+        },
+        {
+            name : 'forgotPasswordMessage',
+            label : '@@app.edm.label.forgotPasswordMessage@@',
+            type : 'textarea',
+            cols : '60',
+            rows : '15',
+            value : '@@app.edm.message.forgotPasswordMessage@@'
+        },
+        {
+            name : 'accountLockoutSubject',
+            label : '@@app.edm.label.accountLockoutSubject@@',
+            type : 'textfield',
+            value : '@@app.edm.message.accountLockoutSubject@@'
+        },
+        {
+            name : 'accountLockoutMessage',
+            label : '@@app.edm.label.accountLockoutMessage@@',
+            type : 'textarea',
+            cols : '60',
+            rows : '15',
+            value : '@@app.edm.message.accountLockoutMessage@@'
+        }
+    ],
+    buttons : [{
+        name : 'testmail',    
+        label : '@@app.emailtool.sendTestMail@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/plugin/org.joget.apps.app.lib.EmailTool/service?action=testmail',
+        fields : ['host', 'port', 'security', 'username', 'password', 'from'],
+        require_fields : ['host', 'port', 'from'],
+        addition_fields : [
+            {
+                name : 'toSpecific',
+                label : '@@app.emailtool.toEmail@@',
+                type : 'textfield',
+                required : 'True'
+            }
+        ]
+    }]
+}

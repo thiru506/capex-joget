@@ -1,0 +1,130 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "%s",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "tableName": "%s",
+        "name": "%s",
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "elementUniqueKey": "4895"
+    },
+    "elements": [{
+        "elements": [{
+            "elements": [{
+                "className": "org.joget.apps.form.lib.HiddenField",
+                "properties": {
+                    "id": "parent_id",
+                    "workflowVariable": "",
+                    "value": "",
+                    "useDefaultWhenEmpty": "",
+                    "elementUniqueKey": "4914"
+                }
+            }, {
+                "className": "org.joget.apps.form.lib.HiddenField",
+                "properties": {
+                    "id": "approver",
+                    "workflowVariable": "",
+                    "value": "#currentUser.username#",
+                    "useDefaultWhenEmpty": "",
+                    "elementUniqueKey": "4915"
+                }
+            }, {
+                "className": "org.joget.apps.form.lib.HiddenField",
+                "properties": {
+                    "id": "approval_date",
+                    "workflowVariable": "",
+                    "value": "#date.yyyy-MM-dd HH:mm#",
+                    "useDefaultWhenEmpty": "",
+                    "elementUniqueKey": "4916"
+                }
+            }, {
+                "className": "org.joget.apps.form.lib.SelectBox",
+                "properties": {
+                    "readonlyLabel": "",
+                    "validator": {
+                        "className": "org.joget.apps.form.lib.DefaultValidator",
+                        "properties": {
+                            "message": "",
+                            "mandatory": "true",
+                            "custom-regex": "",
+                            "type": ""
+                        }
+                    },
+                    "controlField": "",
+                    "label": "%s",
+                    "size": "",
+                    "id": "status",
+                    "workflowVariable": "status",
+                    "optionsBinder": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "value": "",
+                    "readonly": "",
+                    "multiple": "",
+                    "options": [{
+                        "grouping": "",
+                        "value": "",
+                        "label": ""
+                    }, {
+                        "grouping": "",
+                        "value": "%s",
+                        "label": "%s"
+                    }, {
+                        "grouping": "",
+                        "value": "%s",
+                        "label": "%s"
+                    }, {
+                        "grouping": "",
+                        "value": "%s",
+                        "label": "%s"
+                    }],
+                    "elementUniqueKey": "4917"
+                }
+            }, {
+                "className": "org.joget.plugin.enterprise.RichTextEditorField",
+                "properties": {
+                    "id": "remarks",
+                    "validator": {
+                        "className": "",
+                        "properties": {}
+                    },
+                    "value": "",
+                    "label": "%s",
+                    "readonly": "",
+                    "elementUniqueKey": "4918"
+                }
+            }],
+            "className": "org.joget.apps.form.model.Column",
+            "properties": {
+                "width": "100%%",
+                "elementUniqueKey": "4908"
+            }
+        }],
+        "className": "org.joget.apps.form.model.Section",
+        "properties": {
+            "id": "section1",
+            "loadBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "visibilityControl": "",
+            "regex": "",
+            "visibilityValue": "",
+            "storeBinder": {
+                "className": "",
+                "properties": {}
+            },
+            "label": "",
+            "permission": {
+                "className": "",
+                "properties": {}
+            },
+            "elementUniqueKey": "4896"
+        }
+    }]
+}

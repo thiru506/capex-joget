@@ -1,0 +1,285 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family:Arial, Helvetica, sans-serif;
+    color:#333333;
+    font-size:12px;
+    background: url(bg_repeat.jpg) 0 0 repeat-x;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a { color: #145985;
+    text-decoration:none;
+}
+
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:24px;
+    color:#145985;
+    padding:50px 25px 0;
+    float:left;
+    font-weight: bold
+}
+
+h4 {
+    font-size:15px;
+    font-weight:700;
+    color:#145985;
+}
+
+h2 {
+    font-size:40px;
+    font-weight: 600;
+    color:#145985;
+}
+
+#header, #main, #footer {
+    border-bottom: 0px;
+}
+
+#page {
+    border-left: 0;
+    border-right: 0
+}
+
+#page {
+    width:950px;
+    padding:0 105px;
+    margin:0 auto;
+    background: url(bg.jpg) top right no-repeat;
+}
+
+#header-info {
+    margin: 0 15px;
+    padding: 15px 0;
+}
+
+#header-link{
+    display:block;
+}
+
+#header-link span{
+    padding-left: 25px;
+}
+
+#header-message{
+    clear:both;
+    margin: -60px 0 0;
+}
+
+#header-logout-text{
+    width:56px;
+    padding-right:15px;
+}
+
+#header-logout-text a{
+    background: url(logout_btn.png) top right no-repeat;
+    text-align: center;
+    color:#fff;
+    padding-top: 5px;
+    height:18px;
+    width:56px;
+    display:block;
+}
+
+#header-logout-text a:hover{
+    background: url(logout_btn_hover.png) top right no-repeat;
+}
+
+#main {
+    margin: 5px 0;
+    padding: 0;
+    width: 950px;
+    min-height: 400px;
+    background: transparent;
+    border: 0px;
+    clear:both;
+}
+
+#navigation {
+    width: 185px;
+    border: none;
+    min-height: 200px;
+}
+
+.category {
+    margin: 3px 15px;
+    width: 168px;
+    color:#FFFFFF;
+    font-size:14px;
+    font-weight:700;
+    line-height:31px;
+    margin-bottom:3px;
+}
+
+.category-label {
+    background: #d8d8d8 url(menu.jpg) 0 0 no-repeat;
+    color: #FFFFFF;
+}
+
+.category-label span {
+    display: block;
+    padding-left: 25px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 31px;    
+}
+
+.category-label a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-container a {
+    color: #3F3F3F;
+    text-decoration: none;
+    display:block;
+}
+
+.menu {
+    border-bottom: 1px solid #aeaeae;
+    border-top: 1px solid #ffffff;
+    cursor: pointer;
+    padding: 0 10px;
+    background: #d8d8d8;
+}
+
+.menu.first {
+    border-top:0px;
+}
+
+.menu.last {
+    border-bottom:0px;
+}
+
+.menu-link {
+    background:url(menu_arrow.jpg) 10px 20px no-repeat;
+    padding: 10px 10px 10px 30px;
+}
+
+.menu-link span {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu-link:hover span {
+    color: #1c4f96;
+}
+
+.menu-container .current span {
+    color: #1c4f96;
+    font-weight: bold;
+}
+
+#content {
+    background:#d3ebf7;
+    width:720px;
+    float:right;
+    border:#b8e2f7 1px solid;
+    padding:15px;
+}
+
+#footer {
+    padding: 5px 20px;
+    font-size:11px; 
+    color: #999;
+}
+
+#login #main{
+    margin: 30px 0 0;
+    
+}
+
+#login #content{
+    width:920px;
+    text-align: center;
+}
+
+#login #content form{
+    margin: 50px auto;
+    display: block;
+    height:241px;
+    width:307px;
+    padding: 90px 50px 0;
+    color:#fff;
+    font-size: 15px;
+    font-weight:bold;
+    background:url(login_panel_img.png) top center no-repeat;
+}
+
+#login #content table tr{
+    height: 35px;
+    
+}
+
+#login #content table input[type=text],
+#login #content table input[type=password]{
+    height:25px;
+    width:210px;
+    margin-left:20px;
+    margin-top:25px;
+}
+
+#login #content table .form-button{
+    width:89px;
+    height:41px;
+    display:block;
+    float:right;
+    line-height:41px;
+    margin-top:40px;
+    margin-right:15px;
+    text-align:center;
+    background:url(login_btn.png) 0 0 no-repeat;
+    color:#FFFFFF; 
+    font-size:16px;
+    font-weight:600;
+    border:0;
+}
+
+#login #content table .form-button:hover{
+    background:url(login_btn_hover.png) 0 0 no-repeat;
+}
+

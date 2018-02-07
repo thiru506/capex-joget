@@ -1,0 +1,423 @@
+<WorkflowProcess Id="[prefix]assignment_process" Name="%s">
+    <ProcessHeader DurationUnit="h">
+        <Created>%s</Created>
+    </ProcessHeader>
+    <FormalParameters></FormalParameters>
+    <DataFields>
+        <DataField Id="status" IsArray="FALSE">
+            <DataType>
+                <BasicType Type="STRING"/>
+            </DataType>
+        </DataField>
+        <DataField Id="assignee" IsArray="FALSE">
+            <DataType>
+                <BasicType Type="STRING"/>
+            </DataType>
+        </DataField>
+        <DataField Id="duedate" IsArray="FALSE">
+            <DataType>
+                <BasicType Type="STRING"/>
+            </DataType>
+        </DataField>
+    </DataFields>
+    <Activities>
+        <Activity Id="assign" Name="%s">
+            <Implementation>
+                <No/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant_hod</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Join Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition19"/>
+                            <TransitionRef Id="transition30"/>
+                            <TransitionRef Id="transition28"/>
+                        </TransitionRefs>
+                    </Join>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant_hod"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="183,23"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="route1" Name="Route 1">
+            <Route/>
+            <Performer>[prefix]assp_applicant_hod</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Split Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition24"/>
+                            <TransitionRef Id="transition31"/>
+                        </TransitionRefs>
+                    </Split>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant_hod"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="415,27"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="resolve" Name="%s">
+            <Deadline Execution="SYNCHR">
+                <DeadlineCondition>var d = new java.text.SimpleDateFormat('dd/MM/yyyy'); d.parse(duedate);</DeadlineCondition>
+                <ExceptionName>due</ExceptionName>
+            </Deadline>
+            <Implementation>
+                <No/>
+            </Implementation>
+            <Performer>[prefix]assp_assignee</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Join Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition17"/>
+                            <TransitionRef Id="transition26"/>
+                            <TransitionRef Id="transition35"/>
+                        </TransitionRefs>
+                    </Join>
+                    <Split Type="AND">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition6"/>
+                            <TransitionRef Id="transition27"/>
+                        </TransitionRefs>
+                    </Split>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1151.3099670410156,302.51995849609375"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="clarify" Name="%s">
+            <Implementation>
+                <No/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="679.3200073242187,29"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="route2" Name="Route 2">
+            <Route/>
+            <Performer>[prefix]assp_assignee</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Split Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition14"/>
+                            <TransitionRef Id="transition25"/>
+                            <TransitionRef Id="transition29"/>
+                            <TransitionRef Id="transition34"/>
+                        </TransitionRefs>
+                    </Split>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="772.97998046875,247.81997680664062"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="route3" Name="Route 3">
+            <Route/>
+            <Performer>[prefix]assp_applicant</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Split Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition16"/>
+                            <TransitionRef Id="transition18"/>
+                        </TransitionRefs>
+                    </Split>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1165.4899597167968,39"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="verify" Name="%s">
+            <Implementation>
+                <No/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="997.949951171875,27"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="resolved_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="841.9799499511719,27.969993591308593"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="reopened_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1148.97998046875,134"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="closed_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="1295,30"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="new_submission_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="169,30"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="clarification_needed_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="607.9199981689453,153.5"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="updated_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="731.9099731445312,154.5"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="new_assignment_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_assignee</Performer>
+            <TransitionRestrictions>
+                <TransitionRestriction>
+                    <Join Type="XOR">
+                        <TransitionRefs>
+                            <TransitionRef Id="transition24"/>
+                            <TransitionRef Id="transition25"/>
+                        </TransitionRefs>
+                    </Join>
+                </TransitionRestriction>
+            </TransitionRestrictions>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="380,275.98997497558593"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="assignment_due_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_assignee</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="152,336.52996826171875"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="assignment_rejected_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_assignee</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="228.99000549316406,230.5"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="rejected_notification" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_applicant</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_applicant"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="387,26"/>
+            </ExtendedAttributes>
+        </Activity>
+        <Activity Id="activity_trail_update" Name="%s">
+            <Implementation>
+                <Tool Id="default_application"/>
+            </Implementation>
+            <Performer>[prefix]assp_assignee</Performer>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_PARTICIPANT_ID" Value="[prefix]assp_assignee"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_OFFSET" Value="151,96.510009765625"/>
+            </ExtendedAttributes>
+        </Activity>
+    </Activities>
+    <Transitions>
+        <Transition From="assign" Id="transition2" To="route1" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="resolve" Id="transition6" To="route2" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="verify" Id="transition10" To="route3" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route2" Id="transition14" To="resolved_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="resolved_notification" Id="transition15" To="verify" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route3" Id="transition16" To="reopened_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="reopened_notification" Id="transition17" To="resolve" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route3" Id="transition18" To="closed_notification" Name="">
+            <Condition Type="OTHERWISE"/>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="new_submission_notification" Id="transition19" To="assign" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="clarify" Id="transition22" To="updated_notification" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route1" Id="transition24" To="new_assignment_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route2" Id="transition25" To="new_assignment_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="new_assignment_notification" Id="transition26" To="resolve" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="resolve" Id="transition27" To="assignment_due_notification" Name="">
+            <Condition Type="EXCEPTION">due</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route2" Id="transition29" To="assignment_rejected_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="assignment_rejected_notification" Id="transition30" To="assign" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route1" Id="transition31" To="rejected_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="assignment_due_notification" Id="transition33" To="activity_trail_update" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="activity_trail_update" Id="transition28" To="assign" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="route2" Id="transition34" To="clarification_needed_notification" Name="">
+            <Condition Type="CONDITION">status === '%s'</Condition>
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+                <ExtendedAttribute Name="PBUILDER_TRANSITION_CONDITIONS" Value="[{&quot;join&quot;:&quot;&amp;&amp;&quot;,&quot;variable&quot;:&quot;status&quot;,&quot;operator&quot;:&quot;===&quot;,&quot;value&quot;:&quot;%s&quot;}]"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="updated_notification" Id="transition35" To="resolve" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+        <Transition From="clarification_needed_notification" Id="transition23" To="clarify" Name="">
+            <ExtendedAttributes>
+                <ExtendedAttribute Name="JaWE_GRAPH_TRANSITION_STYLE" Value="NO_ROUTING_ORTHOGONAL"/>
+                <ExtendedAttribute Name="JaWE_GRAPH_BREAK_POINTS" Value="orthogonal"/>
+            </ExtendedAttributes>
+        </Transition>
+    </Transitions>
+    <ExtendedAttributes>
+        <ExtendedAttribute Name="JaWE_GRAPH_WORKFLOW_PARTICIPANT_ORDER" Value="[prefix]assp_applicant;[prefix]assp_applicant_hod;[prefix]assp_assignee"/>
+        <ExtendedAttribute Name="JaWE_GRAPH_START_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=[prefix]assp_applicant,CONNECTING_ACTIVITY_ID=new_submission_notification,X_OFFSET=66,Y_OFFSET=37,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=START_DEFAULT"/>
+        <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=[prefix]assp_applicant,CONNECTING_ACTIVITY_ID=closed_notification,X_OFFSET=1568,Y_OFFSET=48,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+        <ExtendedAttribute Name="JaWE_GRAPH_END_OF_WORKFLOW" Value="JaWE_GRAPH_PARTICIPANT_ID=[prefix]assp_applicant,CONNECTING_ACTIVITY_ID=rejected_notification,X_OFFSET=579,Y_OFFSET=37,JaWE_GRAPH_TRANSITION_STYLE=NO_ROUTING_ORTHOGONAL,TYPE=END_DEFAULT"/>
+    </ExtendedAttributes>
+</WorkflowProcess>

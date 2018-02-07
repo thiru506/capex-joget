@@ -1,0 +1,7 @@
+#header .navbar-fixed-top .navbar-inner, #header .navbar-fixed-bottom .navbar-inner {
+    background: whitesmoke;
+}
+.navbar-inverse .brand, .navbar-inverse .nav>li>a {
+    color: #111;
+    text-shadow: none;
+}

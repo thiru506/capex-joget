@@ -1,0 +1,17 @@
+{
+    "host": "",
+    "port": "",
+    "security": "",
+    "username": "",
+    "password": "",
+    "from": "",
+    "toSpecific": "",
+    "toParticipantId": "%s",
+    "cc": "",
+    "subject": "%s",
+    "message": "%s",
+    "isHtml": "",
+    "formDefId": "",
+    "fields": [],
+    "files": []
+}

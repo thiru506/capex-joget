@@ -1,0 +1,82 @@
+.white 
+{color: #B6E467;}
+.header-nav a.btn 
+{color:#B6E467 !important;}
+.header-nav .btn .caret 
+{border-bottom-color: #B6E467 !important; border-top-color: #B6E467 !important;}
+.a.dropdown .fa,
+nav-tabs.nav-stacked > li > a
+{color: #B6E467;}
+.nav-tabs.nav-stacked > li > ul > li > a 
+{color: #B6E467;}
+.navbar,
+.navbar-inner, 
+.nav-tabs.nav-stacked > li.active.current-category > a,
+.nav-tabs.nav-stacked > li.current-category > a,
+.nav-tabs.nav-stacked > li > a:hover,
+.nav-tabs.nav-stacked > li > ul > li > a:hover,
+.nav-tabs.nav-stacked > li > a:focus,
+.nav-tabs.nav-stacked > li > ul > li > a:focus,
+a.brand span
+{background: #002400 !important; color:#fff;}
+.navbar .brand 
+{color:#B6E467; text-shadow:none;}    
+footer,
+#sidebar
+{background: #044200; color:#B6E467 !important;}
+.nav-tabs.nav-stacked  > li.active > a,
+.nav-tabs.nav-stacked  > li > ul > li.active > a,
+.nav-tabs.nav-stacked  > li.active > a:hover,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:hover,
+.nav-tabs.nav-stacked  > li.active > a:focus,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:focus,
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.box-header
+{background: #80DA3C; color:#002400;}
+.nav-tabs.nav-stacked  > li.active > a,
+.nav-tabs.nav-stacked  > li > ul > li.active > a,
+.nav-tabs.nav-stacked  > li.active > a:hover,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:hover,
+.nav-tabs.nav-stacked  > li.active > a:focus,
+.nav-tabs.nav-stacked  > li > ul > li.active > a:focus
+{border-bottom: 1px solid #80DA3C;}
+.box,
+body .dataList table
+{border: 2px solid #075800;}
+.header-nav .nav li:hover,
+.header-nav .nav li:focus,
+.dropdown-menu-title
+{background: #075800;}
+.dropdown-menu:after, .dropdown-menu:before 
+{border-bottom: 9px solid #075800 !important;}
+.btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+body .dataList td a, 
+body input.btn[type="submit"]
+{background-color: #075800; border-color: #075800; color:#fff}
+body .dataList th.sorted,
+body .dataList thead tr, 
+body .dataList thead tr a, 
+body .dataList thead tr a:visited,
+.navbar .nav > li > a,
+.navbar .header-nav
+{background-color: #075800; color:#fff}
+/*.breadcrumb,
+.form-section-title span, 
+.subform-section-title span
+{background-color: #f7f7f7; color:#000}*/
+@media only screen and (max-width: 767px) {
+    .navbar .navbar-inner .container-fluid {background: #075800 !important;}
+}

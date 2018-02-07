@@ -1,0 +1,94 @@
+a.dropdown .fa, .nav-tabs.nav-stacked > li > a, .nav-tabs.nav-stacked > li > ul > li > a {
+    color: #000;
+}
+.navbar, .navbar-inner, .nav-tabs.nav-stacked > li.active.current-category > a, .nav-tabs.nav-stacked > li.current-category > a, .nav-tabs.nav-stacked > li > a:hover, .nav-tabs.nav-stacked > li > ul > li > a:hover, .nav-tabs.nav-stacked > li > a:focus, .nav-tabs.nav-stacked > li > ul > li > a:focus, a.brand span {
+    background: whitesmoke !important;
+    color: #333;
+    border-bottom: none;
+}
+.nav-tabs.nav-stacked > li.active.current-category > a, .nav-tabs.nav-stacked > li.current-category > a {
+    background: silver !important;
+}
+.navbar .brand {
+    color: #555;
+    text-shadow: none;
+}
+footer, #sidebar {
+    background: #ddd;
+    color: #000 !important;
+}
+.nav-tabs.nav-stacked > li.active > a, .nav-tabs.nav-stacked > li > ul > li.active > a, .nav-tabs.nav-stacked > li.active > a:hover, .nav-tabs.nav-stacked > li > ul > li.active > a:hover, .nav-tabs.nav-stacked > li.active > a:focus, .nav-tabs.nav-stacked > li > ul > li.active > a:focus, .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a, .dropdown-menu .active > a, .dropdown-menu .active > a:hover, .box-header, .navbar .header-nav {
+    background: whitesmoke;
+    color: #555;
+}
+.nav-tabs.nav-stacked > li.active > a, .nav-tabs.nav-stacked > li > ul > li.active > a, .nav-tabs.nav-stacked > li.active > a:hover, .nav-tabs.nav-stacked > li > ul > li.active > a:hover, .nav-tabs.nav-stacked > li.active > a:focus, .nav-tabs.nav-stacked > li > ul > li.active > a:focus {
+    border: none;
+    color: #555;
+}
+.box, body .dataList table {
+    border: 1px solid #aaa;
+}
+.header-nav .nav li:hover, .header-nav .nav li:focus, .dropdown-menu-title {
+    background: #1751A5;
+}
+.dropdown-menu:after, .dropdown-menu:before {
+    border-bottom: 9px solid #1751A5 !important;
+}
+.btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, body .dataList td a, body input.btn[type="submit"] {
+    background-color: #3486C0;
+    border-color: #3486C0;
+    color: #fff
+}
+body .dataList th.sorted, body .dataList thead tr, body .dataList thead tr a, body .dataList thead tr a:visited, .navbar .nav > li > a {
+    background-color: #888;
+    color: #fff
+}
+.breadcrumb {
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    line-height: 33px;
+    background-color: #f9f9f9;
+}
+body .dataList th {
+    border-right: none;
+}
+footer {
+    border-top: solid 1px #aaa;
+}
+.task .time {
+    width: 60%;
+    font-size: 6pt !important;
+}
+li.task {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+ul.dropdown-menu.notifications {
+    border-left: 0px;
+    border-right: 0px;
+}
+ul.notifications li, ul.tasks li, ul.messages li {
+    width: 270px;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+ul.dropdown-menu {
+    border-left: 0px;
+    border-right: 0px;
+}
+.dropdown-menu li a {
+    padding: 7px 20px !important;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.dropdown-menu-title a:link {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: 3px 6px !important;
+    border-bottom: 1px solid #fff;
+}
+@media only screen and (max-width: 767px) {
+    .navbar .navbar-inner .container-fluid {background: #888 !important;}
+}

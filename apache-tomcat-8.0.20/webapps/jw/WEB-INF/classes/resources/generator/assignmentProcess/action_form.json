@@ -1,0 +1,545 @@
+{
+    "className": "org.joget.apps.form.model.Form",
+    "properties": {
+        "id": "%s",
+        "loadBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        },
+        "tableName": "%s",
+        "description": "",
+        "name": "%s",
+        "storeBinder": {
+            "className": "org.joget.apps.form.lib.WorkflowFormBinder"
+        }
+    },
+    "elements": [{
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "id": "action",
+                                "readonlyLabel": "",
+                                "workflowVariable": "status",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "controlField": "",
+                                "label": "%s",
+                                "multiple": "",
+                                "readonly": "",
+                                "options": [{
+                                        "grouping": "",
+                                        "value": "",
+                                        "label": ""
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }],
+                                "size": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section_assign",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "return \"%s\".equals(\"#form.[formTableName].status?java#\") \n    || \"%s\".equals(\"#form.[formTableName].status?java#\") \n    || \"%s\".equals(\"#form.[formTableName].status?java#\") ;"
+                    }
+                },
+                "label": "%s"
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "action",
+                                "workflowVariable": "status",
+                                "value": "%s",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section-clarification",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "return \"%s\".equals(\"#form.[formTableName].status?java#\");"
+                    }
+                },
+                "label": "%s"
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "readonlyLabel": "true",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "endDateFieldId": "",
+                                "label": "%s",
+                                "format": "yy-mm-dd",
+                                "startDateFieldId": "",
+                                "allowManual": "",
+                                "id": "duedate",
+                                "workflowVariable": "duedate",
+                                "value": "#variable.duedate#",
+                                "dataFormat": "dd\/MM\/yyyy",
+                                "readonly": "true",
+                                "yearRange": "c-10:c+10",
+                                "currentDateAs": "minDate"
+                            }
+                        }, {
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "id": "action",
+                                "readonlyLabel": "",
+                                "workflowVariable": "status",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "controlField": "",
+                                "label": "%s",
+                                "multiple": "",
+                                "readonly": "",
+                                "options": [{
+                                        "grouping": "",
+                                        "value": "",
+                                        "label": ""
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }],
+                                "size": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section-resolve",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "return \"%s\".equals(\"#form.[formTableName].status?java#\")\n    || \"%s\".equals(\"#form.[formTableName].status?java#\")\n    || \"%s\".equals(\"#form.[formTableName].status?java#\");"
+                    }
+                },
+                "label": "%s"
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.SelectBox",
+                            "properties": {
+                                "id": "action",
+                                "readonlyLabel": "",
+                                "workflowVariable": "status",
+                                "optionsBinder": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "controlField": "",
+                                "label": "%s",
+                                "multiple": "",
+                                "readonly": "",
+                                "options": [{
+                                        "grouping": "",
+                                        "value": "",
+                                        "label": ""
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }, {
+                                        "grouping": "",
+                                        "value": "%s",
+                                        "label": "%s"
+                                    }],
+                                "size": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section-verify",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "return \"%s\".equals(\"#form.[formTableName].status?java#\");"
+                    }
+                },
+                "label": "%s"
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "action",
+                                "workflowVariable": "status",
+                                "value": "%s",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }, {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "remarks",
+                                "workflowVariable": "",
+                                "value": "",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section5",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": "",
+                "permission": {
+                    "className": "org.joget.apps.userview.lib.BeanShellPermission",
+                    "properties": {
+                        "script": "return \"#form.[formTableName].status?java#\".startsWith(\"#form.\");"
+                    }
+                }
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.plugin.enterprise.MultiSelectBox",
+                            "properties": {
+                                "id": "assignee",
+                                "readonlyLabel": "",
+                                "workflowVariable": "assignee",
+                                "optionsBinder": {
+                                    "className": "org.joget.plugin.enterprise.UserOptionsBinder",
+                                    "properties": {
+                                        "orgId": "",
+                                        "groupId": "",
+                                        "grouping": "",
+                                        "useAjax": "",
+                                        "addEmptyOption": "",
+                                        "emptyLabel": "",
+                                        "deptId": ""
+                                    }
+                                },
+                                "width": "40%%",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "mandatory": "true",
+                                        "custom-regex": "",
+                                        "type": ""
+                                    }
+                                },
+                                "value": "",
+                                "controlField": "",
+                                "label": "%s",
+                                "multiple": "true",
+                                "readonly": "",
+                                "options": []
+                            }
+                        }, {
+                            "className": "org.joget.apps.form.lib.DatePicker",
+                            "properties": {
+                                "readonlyLabel": "",
+                                "validator": {
+                                    "className": "org.joget.apps.form.lib.DefaultValidator",
+                                    "properties": {
+                                        "message": "",
+                                        "custom-regex": "",
+                                        "mandatory": "true",
+                                        "type": ""
+                                    }
+                                },
+                                "endDateFieldId": "",
+                                "label": "%s",
+                                "format": "yy-mm-dd",
+                                "startDateFieldId": "",
+                                "allowManual": "",
+                                "id": "duedate",
+                                "workflowVariable": "duedate",
+                                "value": "",
+                                "dataFormat": "dd\/MM\/yyyy",
+                                "readonly": "",
+                                "yearRange": "c-10:c+10",
+                                "currentDateAs": "minDate"
+                            }
+                        }, {
+                                "className": "org.joget.apps.form.lib.TextArea",
+                                "properties": {
+                                    "id": "resolved_remarks",
+                                    "workflowVariable": "",
+                                    "readonlyLabel": "",
+                                    "cols": "60",
+                                    "validator": {
+                                        "className": "",
+                                        "properties": {}
+                                    },
+                                    "value": "",
+                                    "label": "%s",
+                                    "readonly": "",
+                                    "rows": "5"
+                                }
+                            }, {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "remarks",
+                                "workflowVariable": "",
+                                "value": "",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }, {
+                            "className": "org.joget.apps.form.lib.CustomHTML",
+                            "properties": {
+                                "id": "hidden",
+                                "autoPopulate": "",
+                                "value": "<script>\n$(function(){\n    var update = function() {\n        var val = \"<strong>%s<\/strong>: \" + FormUtil.getValues(\"assignee\").join(\", \") + \"<br\/>\";\n        val += \"<strong>%s<\/strong>: \" + FormUtil.getValue(\"duedate\");\n        var r = FormUtil.getValue(\"resolved_remarks\");\n        if (r.trim().length > 0) {\n            val += \"<br\/><strong>%s<\/strong>: \" + r;\n        }\n        $(\"input[name$=remarks]:hidden\").val(val);\n    };\n    FormUtil.getField(\"duedate\").change(function(){\n        update();\n    });\n    FormUtil.getField(\"assignee\").change(function(){\n        update();\n    });\n    FormUtil.getField(\"resolved_remarks\").change(function(){\n        update();\n    });\n    if (FormUtil.getValue(\"action\") !== \"%s\") {\n        update();\n    }\n})\n<\/script>",
+                                "label": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section-assign-users",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "action",
+                "regex": "true",
+                "visibilityValue": "%s|%s",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": ""
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.TextArea",
+                            "properties": {
+                                "id": "remarks",
+                                "cols": "60",
+                                "readonlyLabel": "",
+                                "workflowVariable": "",
+                                "validator": {
+                                    "className": "",
+                                    "properties": {}
+                                },
+                                "value": "",
+                                "label": "%s",
+                                "readonly": "",
+                                "rows": "5"
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section-remarks",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "action",
+                "regex": "true",
+                "visibilityValue": "%s|%s|%s|%s|%s|%s",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": ""
+            }
+        }, {
+            "elements": [{
+                    "elements": [{
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "username",
+                                "workflowVariable": "",
+                                "value": "#currentUser.username#",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }, {
+                            "className": "org.joget.apps.form.lib.HiddenField",
+                            "properties": {
+                                "id": "fk",
+                                "workflowVariable": "",
+                                "value": "",
+                                "useDefaultWhenEmpty": ""
+                            }
+                        }],
+                    "className": "org.joget.apps.form.model.Column",
+                    "properties": {
+                        "width": "100%%"
+                    }
+                }],
+            "className": "org.joget.apps.form.model.Section",
+            "properties": {
+                "id": "section6",
+                "loadBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "visibilityControl": "",
+                "regex": "",
+                "visibilityValue": "",
+                "storeBinder": {
+                    "className": "",
+                    "properties": {}
+                },
+                "permission": {
+                    "className": "",
+                    "properties": {}
+                },
+                "label": ""
+            }
+        }]
+}

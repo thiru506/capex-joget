@@ -1,0 +1,360 @@
+[{
+    title : '@@ldapdirectorymanager.config@@',
+    properties : [{
+        name : 'url',
+        label : '@@ldapdirectorymanager.url@@',
+        type : 'textfield',
+        required : 'True',
+        description : '@@ldapdirectorymanager.url.desc@@'
+    },
+    {
+        name : 'username',
+        label : '@@ldapdirectorymanager.username@@',
+        type : 'textfield',
+        required : 'True'
+    },
+    {
+        name : 'password',
+        label : '@@ldapdirectorymanager.password@@',
+        type : 'password',
+        required : 'True'
+    },
+    {
+        name : 'rootDN',
+        label : '@@ldapdirectorymanager.rootdn@@',
+        type : 'textfield',
+        required : 'True',
+        description : '@@ldapdirectorymanager.rootdn.desc@@'
+    }],
+    buttons : [{
+        name : 'testConnection',    
+        label : '@@ldapdirectorymanager.testConnection@@',
+        ajax_url : '[CONTEXT_PATH]/web/json/plugin/org.joget.plugin.ldap.LdapDirectoryManager/service?action=testConnection',
+        fields : ['url', 'username', 'password', 'rootDN']
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.user@@',
+    properties : [{
+        name : 'userBaseDN',
+        label : '@@ldapdirectorymanager.user.basedn@@',
+        type : 'textfield'
+    },
+    {
+        name : 'userImportSearchFilter',
+        label : '@@ldapdirectorymanager.user.import@@',
+        type : 'textfield',
+        value : '(objectClass=person)',
+        description : '@@ldapdirectorymanager.user.import.desc@@'
+    },
+    {
+        name : 'user-attr-username',
+        label : '@@ldapdirectorymanager.user.attr.username@@',
+        type : 'textfield',
+        value : 'sAMAccountName',
+        required : 'True'
+    },
+    {
+        name : 'user-attr-firstName',
+        label : '@@ldapdirectorymanager.user.attr.firstname@@',
+        type : 'textfield',
+        value : 'givenName'
+    },
+    {
+        name : 'user-attr-lastName',
+        label : '@@ldapdirectorymanager.user.attr.lastname@@',
+        type : 'textfield',
+        value : 'sn'
+    },
+    {
+        name : 'user-attr-email',
+        label : '@@ldapdirectorymanager.user.attr.email@@',
+        type : 'textfield',
+        value : 'userPrincipalName'
+    },
+    {
+        name : 'user-attr-active',
+        label : '@@ldapdirectorymanager.user.attr.status@@',
+        description : '@@ldapdirectorymanager.user.attr.status.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-timeZone',
+        label : '@@ldapdirectorymanager.user.attr.timezone@@',
+        description : '@@ldapdirectorymanager.user.attr.timezone.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-locale',
+        label : '@@ldapdirectorymanager.user.attr.locale@@',
+        description : '@@ldapdirectorymanager.user.attr.locale.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.employment@@',
+    properties : [
+    {
+        name : 'user-attr-employeeCode',
+        label : '@@ldapdirectorymanager.user.attr.employeeCode@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-role',
+        label : '@@ldapdirectorymanager.user.attr.role@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-reportTo',
+        label : '@@ldapdirectorymanager.user.attr.reportTo@@',
+        description : '@@ldapdirectorymanager.user.attr.reportTo.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-mappedToReportToAttr',
+        label : '@@ldapdirectorymanager.user.attr.reportToAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.user.attr.reportToAttr.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-groups',
+        label : '@@ldapdirectorymanager.user.attr.groups@@',
+        description : '@@ldapdirectorymanager.user.attr.groups.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-mappedToGroupAttr',
+        label : '@@ldapdirectorymanager.user.attr.groupsAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.user.attr.groupsAttr.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-departments',
+        label : '@@ldapdirectorymanager.user.attr.departments@@',
+        description : '@@ldapdirectorymanager.user.attr.departments.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-mappedToDepartmentAttr',
+        label : '@@ldapdirectorymanager.user.attr.departmentsAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.user.attr.departmentsAttr.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-grade',
+        label : '@@ldapdirectorymanager.user.attr.grade@@',
+        description : '@@ldapdirectorymanager.user.attr.grade.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'user-attr-mappedToGradeAttr',
+        label : '@@ldapdirectorymanager.user.attr.gradeAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.user.attr.gradeAttr.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.group@@',
+    properties : [{
+        name : 'groupBaseDN',
+        label : '@@ldapdirectorymanager.group.basedn@@',
+        type : 'textfield'
+    },
+    {
+        name : 'groupImportSearchFilter',
+        label : '@@ldapdirectorymanager.group.import@@',
+        type : 'textfield',
+        value : '(objectClass=group)',
+        description : '@@ldapdirectorymanager.group.import.desc@@'
+    },
+    {
+        name : 'group-attr-id',
+        label : '@@ldapdirectorymanager.group.attr.id@@',
+        description : '@@ldapdirectorymanager.group.attr.id.desc@@',
+        type : 'textfield',
+        value : 'cn'
+    },
+    {
+        name : 'group-attr-name',
+        label : '@@ldapdirectorymanager.group.attr.name@@',
+        description : '@@ldapdirectorymanager.group.attr.name.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'group-attr-description',
+        label : '@@ldapdirectorymanager.group.attr.description@@',
+        description : '@@ldapdirectorymanager.group.attr.description.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'group-attr-users',
+        label : '@@ldapdirectorymanager.group.attr.users@@',
+        description : '@@ldapdirectorymanager.group.attr.users.desc@@',
+        type : 'textfield',
+        value : 'member'
+    },
+    {
+        name : 'group-attr-mappedToUserAttr',
+        label : '@@ldapdirectorymanager.group.attr.usersAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.group.attr.usersAttr.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.dept@@',
+    properties : [{
+        name : 'departmentBaseDN',
+        label : '@@ldapdirectorymanager.dept.basedn@@',
+        type : 'textfield'
+    },
+    {
+        name : 'departmentImportSearchFilter',
+        label : '@@ldapdirectorymanager.dept.import@@',
+        type : 'textfield',
+        description : '@@ldapdirectorymanager.dept.import.desc@@'
+    },
+    {
+        name : 'department-attr-id',
+        label : '@@ldapdirectorymanager.dept.attr.id@@',
+        description : '@@ldapdirectorymanager.dept.attr.id.desc@@',
+        type : 'textfield',
+        value : 'cn'
+    },
+    {
+        name : 'department-attr-name',
+        label : '@@ldapdirectorymanager.dept.attr.name@@',
+        description : '@@ldapdirectorymanager.dept.attr.name.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'department-attr-description',
+        label : '@@ldapdirectorymanager.dept.attr.description@@',
+        description : '@@ldapdirectorymanager.dept.attr.description.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'department-attr-hod',
+        label : '@@ldapdirectorymanager.dept.attr.hod@@',
+        description : '@@ldapdirectorymanager.dept.attr.hod.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'department-attr-users',
+        label : '@@ldapdirectorymanager.dept.attr.users@@',
+        description : '@@ldapdirectorymanager.dept.attr.users.desc@@',
+        type : 'textfield',
+        value : 'member'
+    },
+    {
+        name : 'department-attr-mappedToUserAttr',
+        label : '@@ldapdirectorymanager.dept.attr.usersAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.dept.attr.usersAttr.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.grade@@',
+    properties : [{
+        name : 'gradeBaseDN',
+        label : '@@ldapdirectorymanager.grade.basedn@@',
+        type : 'textfield'
+    },
+    {
+        name : 'gradeImportSearchFilter',
+        label : '@@ldapdirectorymanager.grade.import@@',
+        type : 'textfield',
+        description : '@@ldapdirectorymanager.grade.import.desc@@'
+    },
+    {
+        name : 'grade-attr-id',
+        label : '@@ldapdirectorymanager.grade.attr.id@@',
+        description : '@@ldapdirectorymanager.grade.attr.id.desc@@',
+        type : 'textfield',
+        value : 'cn'
+    },
+    {
+        name : 'grade-attr-name',
+        label : '@@ldapdirectorymanager.grade.attr.name@@',
+        description : '@@ldapdirectorymanager.grade.attr.name.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'grade-attr-description',
+        label : '@@ldapdirectorymanager.grade.attr.description@@',
+        description : '@@ldapdirectorymanager.grade.attr.description.desc@@',
+        type : 'textfield',
+        value : 'description'
+    },
+    {
+        name : 'grade-attr-users',
+        label : '@@ldapdirectorymanager.grade.attr.users@@',
+        description : '@@ldapdirectorymanager.grade.attr.users.desc@@',
+        type : 'textfield',
+        value : 'member'
+    },
+    {
+        name : 'grade-attr-mappedToUserAttr',
+        label : '@@ldapdirectorymanager.grade.attr.usersAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.grade.attr.usersAttr.desc@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.admin@@',
+    properties : [{
+        name : 'roleAdminBaseDN',
+        label : '@@ldapdirectorymanager.admin.basedn@@',
+        type : 'textfield'
+    },
+    {
+        name : 'roleAdminImportSearchFilter',
+        label : '@@ldapdirectorymanager.admin.import@@',
+        type : 'textfield',
+        description : '@@ldapdirectorymanager.admin.import.desc@@'
+    },
+    {
+        name : 'roleAdmin-attr-users',
+        label : '@@ldapdirectorymanager.admin.attr.users@@',
+        description : '@@ldapdirectorymanager.admin.attr.users.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'roleAdmin-attr-mappedToUserAttr',
+        label : '@@ldapdirectorymanager.admin.attr.usersAttr@@',
+        value : 'distinguishedName',
+        description : '@@ldapdirectorymanager.admin.attr.usersAttr@@',
+        type : 'textfield'
+    }]
+},
+{
+    title : '@@ldapdirectorymanager.advanced@@',
+    properties : [{
+        name : 'resultSize',
+        label : '@@ldapdirectorymanager.size@@',
+        value : '100',
+        required : 'True',
+        description : '@@ldapdirectorymanager.size.desc@@',
+        type : 'textfield'
+    },
+    {
+        name : 'debugMode',
+        label : '@@ldapdirectorymanager.debug@@',
+        type : 'checkbox',
+        options : [{
+            value : 'yes',
+            label : ''
+        }]
+    }]
+}]

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp
+    spec="1.0+"
+    codebase="$$codebase"
+    context="$$context"
+    href="$$name">
+  <information>
+    <title>wflow-enterprise-designerweb</title>
+    <vendor>$project.Organization.Name</vendor>
+    <homepage href="http://www.joget.org"/>
+    <description>$project.Description</description>
+  </information>
+  <security>
+     <all-permissions/>
+  </security>
+  <update check="background" policy="prompt-update"/>
+  <resources>
+    <j2se version="1.5+"/>
+     
+<jar href="wflow-designer.jar" version="5.0.13" main="true"/>
+<jar href="jped.jar" version="2.0"/>
+<jar href="jped-highlight.jar" version="2.0"/>
+<jar href="jgraph.jar" version="5.10.2.0"/>
+<jar href="xercesImpl.jar" version="2.8.1"/>
+<jar href="xml-apis.jar" version="1.3.04"/>
+<jar href="itext.jar" version="2.0.6"/>
+<jar href="jedit-syntax.jar" version="2.2.2"/>
+<jar href="commons-discovery.jar" version="0.2"/>
+<jar href="commons-logging.jar" version="1.0.4"/>
+<jar href="officelnfs.jar" version="2.7"/>
+<jar href="commons-codec.jar" version="1.2"/>
+<jar href="httpclient.jar" version="4.5.1"/>
+<jar href="httpmime.jar" version="4.5.1"/>
+<jar href="httpcore.jar" version="4.4.3"/>
+<jar href="log4j.jar" version="1.2.8"/>
+<jar href="nimrod-laf.jar" version="1.2"/>
+
+  </resources>
+  <application-desc main-class="org.joget.designer.Designer"/>
+</jnlp>
+

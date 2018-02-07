@@ -1,0 +1,11 @@
+<Participants>
+    <Participant Id="[prefix]assp_applicant" Name="%s">
+        <ParticipantType Type="ROLE"/>
+    </Participant>
+    <Participant Id="[prefix]assp_applicant_hod" Name="%s">
+        <ParticipantType Type="ROLE"/>
+    </Participant>
+    <Participant Id="[prefix]assp_assignee" Name="%s">
+        <ParticipantType Type="ROLE"/>
+    </Participant>
+</Participants>
